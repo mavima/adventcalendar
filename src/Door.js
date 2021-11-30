@@ -10,8 +10,10 @@ const Door = ({ doorData: { id, day, link, image, open }, handleClick }) => (
     <div className={open ? "front open" : "front"}>
         <div className="window-top"></div>
         <a href={link} target="_blank" rel="noreferrer">
-            <div className="window-bottom">
-                <p><i className="fa fa-hand-pointer-o" aria-hidden="true"></i></p>
+            <div className="link-box">
+                <div className="window-bottom">
+                    <p><i className="fa fa-hand-pointer-o" aria-hidden="true"></i></p>
+                </div>
             </div>
         </a>
     </div>

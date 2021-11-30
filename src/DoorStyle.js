@@ -78,10 +78,20 @@ export const StyledDoor = styled.div`
         background-position: center;
         width: 100px;
         height: 80px;
+        position: absolute;
+        top: 0;
+    }
+
+    .link-box {
+        height: 30px;
+        width: 100px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
     }
 
     .window-bottom {
-        height: 22px;
+        height: 20px;
         width: 100px;
         background-color:  #b6c7db;
         background-image: url(${small_flake}); 
@@ -94,6 +104,8 @@ export const StyledDoor = styled.div`
         box-sizing: border-box;
         border-radius: 0 0 8px 8px;
         display: block;
+        position: absolute;
+        bottom: 0;
 
         p {
             font-size: 12px;
