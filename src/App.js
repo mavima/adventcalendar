@@ -15,7 +15,7 @@ function App() {
 
   const enableDoors = day => {
     const availableDoors = doors.map(door =>
-      door.day <= (dateToday - 15) ? { ...door, available: !door.available } : door
+      door.day <= (dateToday) ? { ...door, available: !door.available } : door
     );
     setDoors(availableDoors);
   }
