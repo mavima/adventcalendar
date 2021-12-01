@@ -63,6 +63,10 @@ function App() {
           />
         ))}
       </div>
+      <div className="copyright">
+        <p>Copyright © 2021 Maria Manninen, Luxembourg</p>
+        <p>Photo by <a href="https://unsplash.com/@myriamzilles?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Myriam Zilles</a> on <a href="https://unsplash.com/collections/76239972/snowman-festival?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+        </div>
     </div>
   );
 }
