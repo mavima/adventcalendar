@@ -14,14 +14,17 @@ function App() {
 
 
   const enableDoors = day => {
-    const availableDoors = doors.map(door =>
-      door.day <= (dateToday) ? { ...door, available: !door.available } : door
-    );
-    setDoors(availableDoors);
+    doors.forEach(door => {
+      dateToday >= door.day ? door.available = true : door.available = false;
+    });
+    // const availableDoors = doors.map(door =>
+    //   dateToday >= door.day ? { ...door, available: door.available } : door
+    // );
+    // setDoors(availableDoors);
+    // console.log(availableDoors)
   }
 
   useEffect(() => {
-
     enableDoors();
   }, [])
 
@@ -37,7 +40,6 @@ function App() {
 
   const handleFlipDoor = id => {
     // only for the available doors according to date
-    console.log(dateToday);
     const availableDoors = doors.map(door =>
       door.available === true);
     setDoors(availableDoors);

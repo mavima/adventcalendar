@@ -47,8 +47,9 @@ export const StyledDoor = styled.div`
         height: 20px;
         text-align: center;
         font-family: 'Praise', cursive;
-        font-weight: bold;
+        /* font-weight: bold; */
         line-height: 20px;
+        font-size: 20px;
     }
 
     .front {
