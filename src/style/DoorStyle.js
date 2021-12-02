@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import snowflake from './snowflake.png';
-import small_flake from './small_flake.png';
+import snowflake from '../images/snowflake.png';
+import small_flake from '../images/small_flake.png';
 
 
 export const StyledDoor = styled.div`

@@ -1,12 +1,21 @@
 import React, { useState, useEffect } from "react";
 import { createCalendar } from "./helpers";
-import Door from "./Door";
-import './App.css';
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+
+import DoorGrid from './components/DoorGrid';
+import PresentList from './components/PresentList';
+
+import './style/App.css';
 
 
 
 function App() {
   const [doors, setDoors] = useState(createCalendar());
+  const [presents, setPresents] = useState([]);
+  const [inputText, setInputText] = useState("");
+  const [inputTarget, setInputTarget] = useState("");
+  const [status, setStatus] = useState("all");
+  const [filteredPresents, setFilteredPresents] = useState([]);
 
 
   const current = new Date();
@@ -23,6 +32,7 @@ function App() {
   useEffect(() => {
 
     enableDoors();
+    getLocalPresents();
   }, [])
 
 
@@ -48,26 +58,76 @@ function App() {
     setDoors(updatedDoors);
   };
 
+  // Logic for present list
+
+  // runs every time presents/status are updated
+  useEffect(() => {
+    handleFilter();
+    saveLocalPresents();
+  }, [presents, status]);
+
+
+
+  const handleFilter = () => {
+    switch(status) {
+      case 'completed':
+        setFilteredPresents(presents.filter(present => present.completed === true));
+        break;
+      case 'uncompleted':
+        setFilteredPresents(presents.filter(present => present.completed === false));
+        break;
+      default:
+        setFilteredPresents(presents);
+        break;
+    }
+  };
+
+  const saveLocalPresents = () => {
+    localStorage.setItem('presents', JSON.stringify(presents));
+  };
+
+  const getLocalPresents = () => {
+    if(localStorage.getItem('presents') === null) {
+      localStorage.setItem('presents', JSON.stringify([]));
+    } else {
+      let localPresent = JSON.parse(localStorage.getItem('presents'));
+      setPresents(localPresent);
+    }
+  }
+
 
 
   return (
-    <div className="container">
-      
-      <div className="door-grid">
-        {doors.map(door => (
-          <Door
-            key={door.id}
-            doorData={door}
-            handleClick={handleFlipDoor}
-            // enableDoors={enableDoors}
-          />
-        ))}
+    <Router>
+      <div className="container">   
+        <Switch>
+          <Route exact path="/">
+            < DoorGrid 
+                doors={doors}
+                handleFlipDoor={handleFlipDoor}
+            />
+          </Route>
+          <Route path="/presentlist">
+            < PresentList 
+              presents={presents} 
+              setPresents={setPresents}
+              filteredPresents={filteredPresents}
+              inputText={inputText}
+              setInputText={setInputText}
+              inputTarget={inputTarget}
+              setInputTarget={setInputTarget}
+              setStatus={setStatus}
+              handleFilter={handleFilter}
+            />
+          </Route>
+        </Switch>   
+
+        <div className="copyright">
+          <p>Copyright © 2021 Maria Manninen</p>
+          <p>Photo by <a href="https://unsplash.com/@myriamzilles?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Myriam Zilles</a> on <a href="https://unsplash.com/collections/76239972/snowman-festival?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+          </div>
       </div>
-      <div className="copyright">
-        <p>Copyright © 2021 Maria Manninen</p>
-        <p>Photo by <a href="https://unsplash.com/@myriamzilles?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Myriam Zilles</a> on <a href="https://unsplash.com/collections/76239972/snowman-festival?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
-        </div>
-    </div>
+    </Router>
   );
 }
 

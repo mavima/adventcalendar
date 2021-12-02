@@ -1,5 +1,5 @@
 import React from "react";
-import { StyledDoor } from './DoorStyle';
+import { StyledDoor } from '../style/DoorStyle';
 
 
 
