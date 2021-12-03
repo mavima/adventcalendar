@@ -2,20 +2,35 @@ import React from "react";
 import { StyledDoor } from '../style/DoorStyle';
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
+import click from '../images/click.png';
 
 
 
-const Door = ({ doorData: { id, day, link, image, open, isPicture }, handleClick }) => {
+
+
+
+const Door = ({ doorData: { id, day, link, image, open, isPicture, isVideo }, handleClick }) => {
 
     const currentId = {id}
-    console.log(currentId.id)
 
     const PictureDoor = () => {
         return (
             <Link to= {`/picture/${currentId.id}`}>
                 <div className="link-box">
                     <div className="window-bottom">
-                        <p><i className="fa fa-hand-pointer-o" aria-hidden="true"></i></p>
+                        <img className="click-icon" src={click} />
+                    </div>
+                </div>
+            </Link>
+        )
+    }
+
+    const VideoDoor = () => {
+        return (
+            <Link to= {`/video/${currentId.id}`}>
+                <div className="link-box">
+                    <div className="window-bottom">
+                        <img className="click-icon" src={click} />
                     </div>
                 </div>
             </Link>
@@ -27,7 +42,7 @@ const Door = ({ doorData: { id, day, link, image, open, isPicture }, handleClick
             <a href={link} target="_blank" rel="noreferrer">
                 <div className="link-box">
                     <div className="window-bottom">
-                        <p><i className="fa fa-hand-pointer-o" aria-hidden="true"></i></p>
+                        <img className="click-icon" src={click} />
                     </div>
                 </div>
             </a>
@@ -42,7 +57,16 @@ const Door = ({ doorData: { id, day, link, image, open, isPicture }, handleClick
     
         <div className={open ? "front open" : "front"}>
             <div className="window-top"></div>
-                {isPicture === true ? <PictureDoor /> : <LinkDoor /> }
+            {isPicture === true &&
+                <PictureDoor />
+            }
+            {isVideo === true &&
+                <VideoDoor />
+            }
+            {isPicture === false &&
+                <LinkDoor />
+            }
+                {/* {isPicture === true ? <PictureDoor /> : <LinkDoor /> } */}
         </div>
         
         <div className={open ? "back open" : "back"}>

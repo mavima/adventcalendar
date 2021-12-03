@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
 import DoorGrid from './components/DoorGrid';
 import Picture from './components/Picture';
+import Video from './components/Video';
 import PresentList from './components/PresentList';
 
 import './style/App.css';
@@ -23,8 +24,8 @@ function App() {
 
 
   const current = new Date();
-  // const dateToday = `${current.getDate()}`
-  const dateToday = '4';
+  const dateToday = `${current.getDate()}`
+
 
 
   const enableDoors = day => {
@@ -125,9 +126,13 @@ function App() {
             < Picture 
               pictures={pictures}
               doors={doors}
+            />
+          </Route>
+          <Route exact path="/video/:id">
+            < Video 
+              doors={doors}
               setDoors={setDoors}
             />
-            {/* <Route path="/:id" component={Picture} /> */}
           </Route>
           <Route path="/presentlist">
             < PresentList 

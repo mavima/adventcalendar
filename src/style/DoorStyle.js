@@ -106,13 +106,14 @@ export const StyledDoor = styled.div`
         display: block;
         position: absolute;
         bottom: 0;
-
-        p {
-            font-size: 12px;
-            padding-top: 5px;
-            margin: 0;
-        }
+    }           
+    
+    .click-icon {
+        height: 15px;
+        width: 15px;
+        margin-top: 3px;
     }
+    
 
 a {
          text-decoration: none;

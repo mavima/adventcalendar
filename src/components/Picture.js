@@ -1,8 +1,7 @@
 import React from 'react';
-// import Door from './Door';
 import { useParams, useHistory, Link } from "react-router-dom";
 
-const Picture = ({doors, setDoors}) => {
+const Picture = ({doors}) => {
 
     const currentId = useParams();
     const pageId = currentId.id
@@ -11,9 +10,6 @@ const Picture = ({doors, setDoors}) => {
     const closeImage = () => history.push('/');
     
 
-
-
- 
     return (
 
         <div>
