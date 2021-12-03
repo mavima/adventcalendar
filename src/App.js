@@ -3,6 +3,7 @@ import { createCalendar } from "./helpers";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
 import DoorGrid from './components/DoorGrid';
+import Picture from './components/Picture';
 import PresentList from './components/PresentList';
 
 import './style/App.css';
@@ -16,10 +17,14 @@ function App() {
   const [inputTarget, setInputTarget] = useState("");
   const [status, setStatus] = useState("all");
   const [filteredPresents, setFilteredPresents] = useState([]);
+  const [pictures, setPictures] = useState([]);
+
+
 
 
   const current = new Date();
-  const dateToday = `${current.getDate()}`
+  // const dateToday = `${current.getDate()}`
+  const dateToday = '4';
 
 
   const enableDoors = day => {
@@ -57,6 +62,14 @@ function App() {
     );
     setDoors(updatedDoors);
   };
+
+  // // Logic for displaying picture
+
+  // const displayImage = (doors) => {
+  //   doors.map((door) => {
+  //     door.link ===  
+  //   })
+  // }
 
   // Logic for present list
 
@@ -106,6 +119,15 @@ function App() {
                 doors={doors}
                 handleFlipDoor={handleFlipDoor}
             />
+          </Route>
+          
+          <Route exact path="/picture/:id">
+            < Picture 
+              pictures={pictures}
+              doors={doors}
+              setDoors={setDoors}
+            />
+            {/* <Route path="/:id" component={Picture} /> */}
           </Route>
           <Route path="/presentlist">
             < PresentList 

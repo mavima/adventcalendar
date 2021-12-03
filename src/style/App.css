@@ -2,6 +2,7 @@
 .container {
   position: relative;
   max-width: 2400px;
+  min-height: 100vh;
   margin: auto;
   padding: 20px;
   background-color: #0F0303;
@@ -138,3 +139,13 @@
   color: green;
 }
 
+.picture-frame {
+  display: flex;
+  justify-content: center;
+}
+
+.big-picture {
+  min-width: 70vw;
+  max-height: 90vh;
+  object-fit: contain;
+}
