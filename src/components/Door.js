@@ -63,10 +63,9 @@ const Door = ({ doorData: { id, day, link, image, open, isPicture, isVideo }, ha
             {isVideo === true &&
                 <VideoDoor />
             }
-            {isPicture === false &&
+            {(isPicture === false && isVideo === false) &&
                 <LinkDoor />
             }
-                {/* {isPicture === true ? <PictureDoor /> : <LinkDoor /> } */}
         </div>
         
         <div className={open ? "back open" : "back"}>
