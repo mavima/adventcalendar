@@ -2,6 +2,7 @@
 .container {
   position: relative;
   max-width: 2400px;
+  min-height: 100vh;
   margin: auto;
   padding: 20px;
   background-color: #0F0303;
@@ -71,6 +72,14 @@
     justify-items: center;
     margin-bottom: 0;
   }
+
+  .close-icon {
+    height: 30px;
+    max-width: 30px;
+    max-height: 90%;
+    margin-right: 10px;
+    margin-top: 10px;
+  }
 }
 
 /* tiny mobile */
@@ -132,9 +141,60 @@
   list-style-type: none;
 }
 
-
-
 .completed {
   color: green;
 }
+
+/* Style for picture and video */
+
+.picture-frame {
+  display: flex;
+  justify-content: center;
+}
+
+.big-picture {
+  min-width: 70vw;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+.video-frame {
+  object-fit: contain;
+}
+
+.video-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+  width: 90vw;
+  min-width: 350px;
+}
+
+.video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 95%;
+  width: 100%;
+  position: absolute;
+}
+
+.close-video {
+  height: 5%;
+  width: 100%;
+  background-color: #f2dab5;
+  opacity: 0.8;
+  position: absolute;
+  bottom: 0;
+  text-align: end;
+  cursor: pointer;
+}
+
+.close-icon {
+  height: 25px;
+  max-width: 25px;
+  max-height: 90%;
+  margin-right: 10px;
+}
+
 
