@@ -6,6 +6,7 @@ import DoorGrid from './components/DoorGrid';
 import Picture from './components/Picture';
 import Video from './components/Video';
 import PresentList from './components/PresentList';
+import NotFound from './components/NotFound';
 
 import './style/App.css';
 
@@ -146,6 +147,9 @@ function App() {
               setStatus={setStatus}
               handleFilter={handleFilter}
             />
+          </Route>
+          <Route>
+            <NotFound />
           </Route>
         </Switch>   
 
