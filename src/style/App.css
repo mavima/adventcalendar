@@ -197,4 +197,41 @@
   margin-right: 10px;
 }
 
+/* style for not-found */
+
+.not-found {
+  width: 90%;
+  height: 90%;
+  padding: 2rem;
+  position: relative;
+}
+
+.oops-message {
+  /* position: absolute;
+  right: 2rem; */
+  margin: auto;
+  background-color: #c6d1d9;
+  color: #718DA2;
+  border-radius: 12px;
+  min-width: 50%;
+  padding: 2rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.oops-message > img {
+  width: 120px;
+  height: auto;
+  border-radius: 12px;
+}
+
+.home-btn {
+  text-decoration: none;
+  padding: 1rem;
+  background-color: #718DA2;
+  border-radius: 6px;
+  color: white;
+  font-weight:bolder;
+  margin-top: 2vh;
+}
+
 
