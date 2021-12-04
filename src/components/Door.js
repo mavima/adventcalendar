@@ -18,7 +18,7 @@ const Door = ({ doorData: { id, day, link, image, open, isPicture, isVideo }, ha
             <Link to= {`/picture/${currentId.id}`}>
                 <div className="link-box">
                     <div className="window-bottom">
-                        <img className="click-icon" src={click} />
+                        <img className="click-icon" src={click} alt="click here"/>
                     </div>
                 </div>
             </Link>
@@ -30,7 +30,7 @@ const Door = ({ doorData: { id, day, link, image, open, isPicture, isVideo }, ha
             <Link to= {`/video/${currentId.id}`}>
                 <div className="link-box">
                     <div className="window-bottom">
-                        <img className="click-icon" src={click} />
+                        <img className="click-icon" src={click} alt="click here"/>
                     </div>
                 </div>
             </Link>
@@ -42,7 +42,7 @@ const Door = ({ doorData: { id, day, link, image, open, isPicture, isVideo }, ha
             <a href={link} target="_blank" rel="noreferrer">
                 <div className="link-box">
                     <div className="window-bottom">
-                        <img className="click-icon" src={click} />
+                        <img className="click-icon" src={click} alt="click here"/>
                     </div>
                 </div>
             </a>

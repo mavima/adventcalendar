@@ -7,7 +7,6 @@ export const StyledDoor = styled.div`
     padding-top: 100%;
     position: relative;
     cursor: pointer;
-
     .back {
     position: absolute;
     background-color: transparent;
@@ -17,7 +16,6 @@ export const StyledDoor = styled.div`
     z-index: 2;
     height: 100px;
     width: 100px;
-
     &.open {
         transform: rotateY(180deg);
         z-index: 0;
@@ -37,7 +35,6 @@ export const StyledDoor = styled.div`
     box-sizing: border-box;
     perspective: 1000px;
  }
-
     .day {
         background-color: grey;
         color: white;
@@ -50,7 +47,6 @@ export const StyledDoor = styled.div`
         font-weight: bold;
         line-height: 20px;
     }
-
     .front {
             background-color: white;
             position: absolute;
@@ -63,14 +59,12 @@ export const StyledDoor = styled.div`
             backface-visibility: hidden;
             display: flex;
             flex-direction: column;
-
                 &.open {
                 transform: rotateY(0deg);
                 z-index: 2;
                 backface-visibility: visible;
             }
         }
-
     .window-top {
         background-image: url(${props => props.background});
         background-repeat: no-repeat;
@@ -81,7 +75,6 @@ export const StyledDoor = styled.div`
         position: absolute;
         top: 0;
     }
-
     .link-box {
         height: 30px;
         width: 100px;
@@ -89,7 +82,6 @@ export const StyledDoor = styled.div`
         left: 0;
         bottom: 0;
     }
-
     .window-bottom {
         height: 20px;
         width: 100px;
@@ -114,10 +106,9 @@ export const StyledDoor = styled.div`
         margin-top: 3px;
     }
     
-
 a {
          text-decoration: none;
          color: #113d70;
 }
-
 `
+

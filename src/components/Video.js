@@ -48,12 +48,7 @@ const Video = ({doors}) => {
             ))} 
               
             </div>
-        </div>
-
-
-
-       
-        
+        </div>       
 
     );
 

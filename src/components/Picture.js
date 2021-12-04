@@ -25,3 +25,4 @@ const Picture = ({doors}) => {
 }
 
 export default Picture;
+
