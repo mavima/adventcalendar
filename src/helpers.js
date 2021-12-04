@@ -13,7 +13,7 @@ export const doorArray = [
   { id: 3, day: 3, link: "https://images-na.ssl-images-amazon.com/images/I/51TsFOg3U9L.jpg",  open: false, available: false, isVideo: false, isPicture: true, image:"https://thumbs.dreamstime.com/b/basic-rgb-153365654.jpg"},
 
   { id: 4, day:4, link: "r3s3qz1_xWU", open: false, available: false, isVideo: true, isPicture: true, image: "https://i.pinimg.com/236x/f7/5c/72/f75c72a91cae4c338512e4d70b82a889--christmas-ideas-frozen-christmas.jpg" },
-  { id: 5, day: 5, link: "https://mariam.codes/whack-a-mole/whack.html", open: false, available: false, isVideo: false, isPicture: false, image: "https://www.christmasgifts.com/clipart/Christmaspresent1.jpg"  },
+  { id: 5, day: 5, link: "PresentList", open: false, available: false, isVideo: false, isPicture: false, image: "https://www.christmasgifts.com/clipart/Christmaspresent1.jpg"  },
   { id: 6, day: 6, link: "https://i.pinimg.com/originals/97/f5/a9/97f5a91ad5067c58e5390ebc4c249743.jpg", open: false, available: false, isVideo: false, isPicture: true, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4UBmhbb4U3EQ6163ug_pVUnOne2eYMY06dA&usqp=CAU"  },
   { id: 7, day: 7, link: "", open: false, available: false, isVideo: false, isPicture: false, image: "https://i.fbcd.co/products/original/cute-xmas-single-image-01-2-f65777934095b1fd63d0981cf63b0247f2d3ceef1192eac1d0e798757a8d8644.jpg"  },
   { id: 8, day: 8, link: "", open: false, available: false, isVideo: false, isPicture: false, image: "https://image.spreadshirtmedia.net/image-server/v1/mp/compositions/T1459A839PA4459PT28D184502963FS3399/views/1,width=378,height=378,backgroundColor=F2F2F2/joulun-tonttu.jpg"  },

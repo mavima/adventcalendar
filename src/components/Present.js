@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
+
 const Present = ({ text, target, present, presents, setPresents, handleFilter, filteredPresents }) => {
     const handleDelete = (e) => {
         setPresents(presents.filter((e) => e.id !== present.id) )
