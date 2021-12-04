@@ -6,6 +6,9 @@ import click from '../images/click.png';
 
 
 
+
+
+
 const Door = ({ doorData: { id, day, link, image, open, isPicture, isVideo }, handleClick }) => {
 
     const currentId = {id}
