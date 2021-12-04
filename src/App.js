@@ -23,11 +23,9 @@ function App() {
 
 
 
-
   const current = new Date();
   
   const dateToday = `${current.getDate()}`
-
 
 
   const enableDoors = day => {
