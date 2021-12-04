@@ -38,8 +38,8 @@ const Form = ({ inputText, setInputText, inputTarget, setInputTarget, presents, 
             <div className="select">
                 <select onChange={handleStatus} name="presents" className="filter-present">
                     <option value="all">All</option>
-                    <option value="completed">Completed</option>
-                    <option value="uncompleted">Uncompleted</option>
+                    <option value="completed">Ready</option>
+                    <option value="uncompleted">Not done</option>
                 </select>
             </div>
         </form>

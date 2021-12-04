@@ -25,7 +25,8 @@ function App() {
 
 
   const current = new Date();
-  const dateToday = `${current.getDate()}`
+  const dateToday = 6;
+  // const dateToday = `${current.getDate()}`
 
 
 

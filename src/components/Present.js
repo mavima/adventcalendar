@@ -1,4 +1,8 @@
 import React from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
+
 
 const Present = ({ text, target, present, presents, setPresents, handleFilter, filteredPresents }) => {
     const handleDelete = (e) => {
@@ -19,9 +23,11 @@ const Present = ({ text, target, present, presents, setPresents, handleFilter, f
 
     return (
         <div className="present">
-            <li className={`present-item ${present.completed ? "completed" :""}`}>{target}:{text}</li>
-            <button onClick={handleComplete}  className="complete-btn">Done<i className="fas fa-check"></i></button>
-            <button onClick={handleDelete} className="trash-btn">Delete<i className="fas fa-trash"></i></button>
+            <li className={`present-item ${present.completed ? "completed" :""}`}>{target}: {text}</li>
+            <div>
+                <button onClick={handleComplete}  className="complete-btn"><FontAwesomeIcon icon={faCheck} /></button>
+                <button onClick={handleDelete} className="trash-btn"> <FontAwesomeIcon icon={faTrash} /></button>
+            </div>
         </div>
     );
     
