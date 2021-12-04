@@ -93,15 +93,20 @@
 /* CSS for present list */
 
 .present-input {
-  padding:15px;
+  padding:6px;
   margin: 1rem;
+  border-radius: 8px;
+  font-size: 15px;
+  border: 0.5px solid beige;
 }
 
 .present-button {
   padding: 8px;
-  background-color: purple;
+  background-color: #0d1496;
   color: white;
-
+  border-radius: 8px;
+  font-weight: bolder;
+  border: 1px solid #0d1496;
 }
 
 .present-list {
@@ -111,12 +116,26 @@
   border-radius: 12px;
   padding: 1rem;
   min-height: 50vh;
-  background-color: #f7e2be;
-  font-size: 2rem;
+  /* background-color: #f7e2be; */
+  background-color: #e2e8ec;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif
+}
+
+.present-list > p {
+  font-weight: lighter;
+  font-size: 1.1rem;
+  text-align:center;
+}
+
+.present {
+  display: flex;
+  justify-content: space-between;
 }
 
 .list-title {
   font-family: 'Praise', cursive;
+  font-size: 3rem;
   font-weight: lighter;
   text-align: center;
   background-image: url('https://www.freepnglogos.com/uploads/christmas-gift-png/christmas-gift-christmas-presents-clipart-png-clipground-5.png');
@@ -136,13 +155,39 @@
   height: 30px;
 }
 
+.filter-present {
+  padding: 5px;
+  border: none;
+  border-radius: 8px;
+}
+
 .present-list > ul {
-  background-color: sandybrown;
+  background-color: #f0f3f5;
   list-style-type: none;
 }
 
 .completed {
   color: green;
+}
+
+.complete-btn {
+  border: 1px solid green;
+  padding: 5px;
+  border-radius: 6px;
+  color: green;
+  font-size: 1rem;
+  margin-right: 2rem;
+  margin-bottom: 5px;
+  width: 28px;
+}
+
+.trash-btn {
+  border: 1px solid #0d1496;
+  padding: 4px;
+  border-radius: 6px;
+  color: #0d1496;
+  font-size: 1rem;
+  width: 28px;
 }
 
 /* Style for picture and video */

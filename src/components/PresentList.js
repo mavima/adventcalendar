@@ -11,6 +11,8 @@ const PresentList = ({ presents, setPresents, filteredPresents, inputText, setIn
     return(
         <div className='present-list'>
             <h1 className="list-title">Gift Check List</h1>
+            <p>Plan your Christmas presents and mark the ones you already have.</p>
+            <p>For privacy your list is saved only on your own device.</p>
             <Form 
                 presents={presents} 
                 setPresents={setPresents}
