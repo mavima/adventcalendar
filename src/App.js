@@ -23,11 +23,9 @@ function App() {
 
 
 
-
   const current = new Date();
-  const dateToday = 6;
-  // const dateToday = `${current.getDate()}`
-
+  
+  const dateToday = `${current.getDate()}`
 
 
   const enableDoors = day => {
@@ -157,7 +155,7 @@ function App() {
         <div className="copyright">
           <p>Copyright © 2021 Maria Manninen</p>
           <p>Photo by <a href="https://unsplash.com/@myriamzilles?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Myriam Zilles</a> on <a href="https://unsplash.com/collections/76239972/snowman-festival?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
-          </div>
+        </div>
       </div>
     </Router>
   );

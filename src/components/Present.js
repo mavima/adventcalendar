@@ -24,7 +24,7 @@ const Present = ({ text, target, present, presents, setPresents, handleFilter, f
     return (
         <div className="present">
             <li className={`present-item ${present.completed ? "completed" :""}`}>{target}: {text}</li>
-            <div>
+            <div className="present-btn-box">
                 <button onClick={handleComplete}  className="complete-btn"><FontAwesomeIcon icon={faCheck} /></button>
                 <button onClick={handleDelete} className="trash-btn"> <FontAwesomeIcon icon={faTrash} /></button>
             </div>
