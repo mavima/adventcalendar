@@ -7,6 +7,7 @@ import Picture from './components/Picture';
 import Video from './components/Video';
 import PresentList from './components/PresentList';
 import NotFound from './components/NotFound';
+import Memory from './components/Memory';
 
 import './style/App.css';
 
@@ -20,12 +21,17 @@ function App() {
   const [status, setStatus] = useState("all");
   const [filteredPresents, setFilteredPresents] = useState([]);
   const [pictures, setPictures] = useState([]);
+  const [cards, setCards] = useState([]);
+  const [turns, setTurns] = useState(0);
+  const [cardOne, setCardOne] = useState(null);
+  const [cardTwo, setCardTwo] = useState(null);
 
 
 
   const current = new Date();
   
   const dateToday = `${current.getDate()}`
+  
 
 
   const enableDoors = day => {
@@ -53,7 +59,6 @@ function App() {
 
   const handleFlipDoor = id => {
     // only for the available doors according to date
-    console.log(dateToday);
     const availableDoors = doors.map(door =>
       door.available === true);
     setDoors(availableDoors);
@@ -145,6 +150,18 @@ function App() {
               setInputTarget={setInputTarget}
               setStatus={setStatus}
               handleFilter={handleFilter}
+            />
+          </Route>
+          <Route path="/memory">
+            <Memory 
+              cards={cards}
+              setCards={setCards}
+              turns={turns}
+              setTurns={setTurns}
+              cardOne={cardOne}
+              cardTwo={cardTwo}
+              setCardOne={setCardOne}
+              setCardTwo={setCardTwo}
             />
           </Route>
           <Route>

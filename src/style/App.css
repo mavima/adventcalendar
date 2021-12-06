@@ -53,6 +53,10 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(6, 1fr);
   }
+
+  .memory-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* big tablet */
@@ -64,6 +68,10 @@
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
     margin-bottom: 0;
+  }
+
+  .memory-grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -82,6 +90,43 @@
     max-height: 90%;
     margin-right: 10px;
     margin-top: 10px;
+  }
+
+  .memory-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* mobile */
+
+@media only screen and (max-width: 450px) {
+  .memory-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .card {
+    width: 100px;
+    height: 100px;
+  }
+
+  .card > .card-front {
+    width: 100px;
+    height: 100px;
+  }
+
+  .card > .card-front > img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .card > .card-back {
+    width: 100px;
+    height: 100px;
+  }
+
+  .card > .card-back > img {
+    width: 100px;
+    height: 100px;
   }
 }
 
@@ -297,3 +342,54 @@
   font-weight:bolder;
   margin-top: 2vh;
 }
+
+/* Style for memory game */
+
+.memory-board {
+  min-width: 300px;
+  min-height: 600px;
+  /* max-width: fit-content;
+  max-height: fit-content; */
+  background-color: palegreen;
+}
+.memory-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  /* grid-template-rows: repeat(8, 1fr); */
+}
+
+.card {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 15px;
+}
+
+.card > img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 1px solid green;
+}
+
+.card-front {
+
+  border: 1px solid red;
+  background-color: papayawhip;
+}
+
+
+.card-back {
+  border: 1px solid blue;
+}
+
+.card > .card-front {
+  transform: rotateY(90deg);
+  position: absolute;
+}
+
+.openCard > .card-front {
+  transform: rotateY(0deg);
+}
+
