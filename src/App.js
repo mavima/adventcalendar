@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { createCalendar } from "./helpers";
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import DoorGrid from './components/DoorGrid';
 import Picture from './components/Picture';
@@ -20,18 +20,19 @@ function App() {
   const [inputTarget, setInputTarget] = useState("");
   const [status, setStatus] = useState("all");
   const [filteredPresents, setFilteredPresents] = useState([]);
-  const [pictures, setPictures] = useState([]);
+  const [pictures] = useState([]);
   const [cards, setCards] = useState([]);
   const [turns, setTurns] = useState(0);
   const [cardOne, setCardOne] = useState(null);
   const [cardTwo, setCardTwo] = useState(null);
+  const [disabled, setDisabled] = useState(false);
 
 
 
   const current = new Date();
   
   const dateToday = `${current.getDate()}`
-  
+  // const dateToday = 20
 
 
   const enableDoors = day => {
@@ -162,6 +163,8 @@ function App() {
               cardTwo={cardTwo}
               setCardOne={setCardOne}
               setCardTwo={setCardTwo}
+              disabled={disabled}
+              setDisabled={setDisabled}
             />
           </Route>
           <Route>

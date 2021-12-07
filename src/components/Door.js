@@ -1,6 +1,6 @@
 import React from "react";
 import { StyledDoor } from '../style/DoorStyle';
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import click from '../images/click.png';
 
@@ -39,7 +39,7 @@ const Door = ({ doorData: { id, day, link, image, open, isPicture, isVideo }, ha
 
     const LinkDoor = () => {
         return (
-            <a href={link} target="_blank" rel="noreferrer">
+            <a href={link} rel="noreferrer">
                 <div className="link-box">
                     <div className="window-bottom">
                         <img className="click-icon" src={click} alt="click here"/>
