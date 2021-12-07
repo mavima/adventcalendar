@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { useParams, useHistory, Link } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 
 import close from '../images/close.png';
 
@@ -26,7 +26,7 @@ const Video = ({doors}) => {
         title="Embedded video"
         />
         <div className="close-video" onClick={closeImage}>
-            <img className="close-icon" src={close} />
+            <img className="close-icon" src={close} alt="close"/>
         </div>  
     </div>
     );

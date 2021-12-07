@@ -1,6 +1,6 @@
-import {React, useEffect } from 'react';
+import { React, useEffect } from 'react';
+import { useHistory } from "react-router-dom";
 import Card from './Card';
-import shuffle from '../helpers';
 
 
 const cardImages = [
@@ -14,12 +14,15 @@ const cardImages = [
     { "src": "img/Snowman.png", matched: false},
 ]
 
-const Memory = ({cards, setCards, turns, setTurns, cardOne, setCardOne, cardTwo, setCardTwo }) => {
+const Memory = ({cards, setCards, turns, setTurns, cardOne, setCardOne, cardTwo, setCardTwo, disabled, setDisabled }) => {
 
     const shuffleCards = () => {
         const shuffledCards = [...cardImages, ...cardImages]
             .sort(() => Math.random() - 0.5)
             .map((card) => ({ ...card, id: Math.random() }))
+
+        setCardOne(null);
+        setCardTwo(null);
         setCards(shuffledCards);
         setTurns(0);
     }
@@ -28,8 +31,21 @@ const Memory = ({cards, setCards, turns, setTurns, cardOne, setCardOne, cardTwo,
         cardOne  ? setCardTwo(card) : setCardOne(card);
     }
 
-    const findMatch = () => {
+
+    const resetTurn = () => {
+        setCardTwo(null)
+        setCardOne(null)
+        setTurns(prevTurns => prevTurns + 1)
+        setDisabled(false)
+    }
+
+    useEffect(() => {
+        shuffleCards()
+    }, [])
+
+    useEffect(() => {
         if (cardOne && cardTwo) {
+            setDisabled(true)
             if (cardOne.src === cardTwo.src) {
                 setCards(prevCards => {
                     return prevCards.map(card => {
@@ -42,25 +58,20 @@ const Memory = ({cards, setCards, turns, setTurns, cardOne, setCardOne, cardTwo,
                 })
                 resetTurn();
             } else {
-                resetTurn();
+                setTimeout(() => resetTurn(), 1000)
             }
         }
-    }
-
-    const resetTurn = () => {
-        setCardTwo(null)
-        setCardOne(null)
-        setTurns(prevTurns => prevTurns + 1)
-    }
-
-    useEffect(() => {
-        findMatch();
     }, [cardOne, cardTwo])
- 
+
+    const history = useHistory();
+    const closeImage = () => history.push('/');
 
     return (
         <div className="memory-board">
-        <button onClick={shuffleCards}>New game</button>
+            <div className="memory-stripe">
+                <button onClick={shuffleCards} className="memory-button">Play again!</button>
+                <p className="turn-count">Turns: {turns}</p>
+            </div>
         <div className="memory-grid">
         { cards.map(card => (
             <Card
@@ -68,10 +79,12 @@ const Memory = ({cards, setCards, turns, setTurns, cardOne, setCardOne, cardTwo,
                 key={card.id}
                 src={card.src}
                 handleChoice={handleChoice}
-                open={card === cardOne || card === cardTwo || card === card.matched}
+                disabled={disabled}
+                open={card === card.matched || card === cardOne || card === cardTwo}
             />
         ))}
         </div>
+        <button className="back-home-button" onClick={closeImage}>Home</button>
     </div>
     )
 

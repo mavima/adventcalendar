@@ -28,9 +28,9 @@ const Form = ({ inputText, setInputText, inputTarget, setInputTarget, presents, 
     return (
         // <h1>Form</h1>
         <form className="present-form">
-            <img className="list-icon" src={head} />
+            <img className="list-icon" src={head} alt="person"/>
             <input value={inputTarget} onChange={handleTargetInput} type="text" className="present-input"/>
-            <img className="list-icon" src={gift} />
+            <img className="list-icon" src={gift} alt="present" />
             <input value={inputText} onChange={handleInput} type="text" className="present-input" />
             <button onClick={handleSubmit} className="present-button" type="submit">
                 Add +
