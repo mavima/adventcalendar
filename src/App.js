@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { createCalendar } from "./helpers";
+import { createQuiz } from './helpers';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import DoorGrid from './components/DoorGrid';
@@ -8,6 +9,7 @@ import Video from './components/Video';
 import PresentList from './components/PresentList';
 import NotFound from './components/NotFound';
 import Memory from './components/Memory';
+import Quiz from './components/Quiz';
 
 import './style/App.css';
 
@@ -26,6 +28,12 @@ function App() {
   const [cardOne, setCardOne] = useState(null);
   const [cardTwo, setCardTwo] = useState(null);
   const [disabled, setDisabled] = useState(false);
+  const [language, setLanguage] = useState("english");
+  const [quizPoints, setQuizPoints] = useState(0);
+  const [questions, setQuestions] = useState(createQuiz());
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [showResult, setShowResult] = useState(false);
+  const [character, setCharacter] = useState(null)
 
 
 
@@ -165,6 +173,22 @@ function App() {
               setCardTwo={setCardTwo}
               disabled={disabled}
               setDisabled={setDisabled}
+            />
+          </Route>
+          <Route path="/quiz">
+            <Quiz 
+              questions={questions}
+              setQuestions={setQuestions}
+              currentQuestion={currentQuestion}
+              setCurrentQuestion={setCurrentQuestion}
+              language={language}
+              setLanguage={setLanguage}
+              quizPoints={quizPoints}
+              setQuizPoints={setQuizPoints}
+              showResult={showResult}
+              setShowResult={setShowResult}
+              character={character}
+              setCharacter={setCharacter}
             />
           </Route>
           <Route>
