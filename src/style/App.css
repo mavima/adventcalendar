@@ -435,6 +435,69 @@
   transition-delay: 0;
 }
 
+/* style for quiz */
+
+.quiz-page {
+  background-color: #e2e8ec;
+  color: #084460;
+  min-width: 300px;
+  min-height: 50vh;
+  max-width: 500px;
+  margin: auto;
+  padding: 15px;
+  border-radius: 12px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.quiz-title {
+  font-family: 'Praise', cursive;
+  font-size: 3rem;
+  font-weight: lighter;
+  text-align: center;
+}
+
+.quiz-result {
+  text-align: center;
+  max-width: 500px;
+  min-width: 300px;
+}
+
+.character-img {
+  max-width: 200px;
+  height: 200px;
+  border: 2px solid white;
+  object-fit: cover;
+  margin: auto;
+  margin-top: 1rem;
+  display: block;
+  border-radius: 3px;
+}
+
+.question-text {
+margin-bottom: 1.5vh;
+}
+
+.answer-button {
+  background-color: #C3D0D8;
+  border: 1px solid #C3D0D8;
+  padding: 4px;
+  width: fit-content;
+  margin: 6px 0;
+  border-radius: 3px;
+  font-size: 0.8rem;
+}
+
+.inline-btns {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.margin-right {
+  margin-right: 1rem;
+}
+
+
 
 .back-home-button {
   padding: 5px;
