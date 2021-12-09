@@ -107,7 +107,76 @@ options: [
       },
 ]
 
+const quizQuestionsFinnish = [
+  {
+    questionText: "Mikä on parasta jouluruokaa?",
+id: Math.floor(Math.random() * 100),
+     options: [
+      { answerText: "Suklaa", chosen: false, points: 1 },
+      { answerText: "Pizza tai sushi", chosen: false, points: 0 },
+      { answerText: "Kinkku ja lanttulaatikko", chosen: false, points: 3 },
+      { answerText: "Lohi ja sienisalaatti", chosen: false, points: 2 },
+    ],
+},
+{
+  questionText: "Mitä teet mieluiten joulupäivänä lounaan jälkeen?", id: Math.floor(Math.random() * 100),
+  options: [
+    { answerText: "Pelaan lautapelejä tai luen", chosen: false, points: 2 },
+    { answerText: "Syön vähän lisää", chosen: false, points: 1 },
+    { answerText: "Lähden kävelylle tai pulkkamäkeen", chosen: false, points: 3 },
+    { answerText: "Pelaan tietokonepelejä", chosen: false, points: 0 },
+  ],
+},
+{
+questionText: "Mitä annat äidillesi joululahjaksi?", id: Math.floor(Math.random() * 100),
+options: [
+  { answerText: "En mitään, pitäisikö?", chosen: false, points: 0 },
+  { answerText: "Neulon itse villapaidan tai maalaan taulun", chosen: false, points: 3 },
+  { answerText: "Kirjan", chosen: false, points: 2 },
+  { answerText: "En tiedä vielä", chosen: false, points: 1 },
+],
+},
+{
+questionText: "Mikä on paras joululaulu?", id: Math.floor(Math.random() * 100),
+options: [
+  { answerText: "All I Want For Christmas Is You", chosen: false, points: 1 },
+  { answerText: "Joulupukki, joulupukki", chosen: false, points: 2 },
+  { answerText: "Maa on niin kaunis", chosen: false, points: 3 },
+  { answerText: "Inhoan joulumusiikkia", chosen: false, points: 0 },
+],
+},
+{
+  questionText: "Mitä katsot mielelläsi TV:stä jouluna?", id: Math.floor(Math.random() * 100),
+  options: [
+    { answerText: "Niko lentäjän poika", chosen: false, points: 2 },
+    { answerText: "Yksin kotona", chosen: false, points: 1 },
+    { answerText: "Joulurauhan julistus", chosen: false, points: 3 },
+    { answerText: "Jonkun Bond-elokuvan", chosen: false, points: 0 },
+  ],
+  },
+  {
+    questionText: "Mikä on tärkeintä joulussa?", id: Math.floor(Math.random() * 100),
+    options: [
+      { answerText: "Saa viettää aikaa perheen kanssa", chosen: false, points: 2 },
+      { answerText: "Jouluevankeliumin sanoma", chosen: false, points: 3 },
+      { answerText: "On loma", chosen: false, points: 0 },
+      { answerText: "Lahjat!", chosen: false, points: 1 },
+    ],
+    },
+    {
+      questionText: "Mieluisin joululahjasi?", id: Math.floor(Math.random() * 100),
+      options: [
+        { answerText: "Itse neulotut villasukat", chosen: false, points: 3 },
+        { answerText: "Lahjakortti", chosen: false, points: 0 },
+        { answerText: "Sukset tai pulkka", chosen: false, points: 2 },
+        { answerText: "Pelikonsoli", chosen: false, points: 1 },
+      ],
+      },
+]
+
+
 export const createCalendar = () => shuffle(doorArray);
 
 
 export const createQuiz = () => {return quizQuestions};
+export const createFinnishQuiz = () => {return quizQuestionsFinnish}

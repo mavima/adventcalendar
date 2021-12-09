@@ -3,6 +3,9 @@ import { useHistory } from "react-router-dom";
 import Form from './Form';
 import Present from './Present';
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHome } from "@fortawesome/free-solid-svg-icons";
+
 
 const PresentList = ({ presents, setPresents, filteredPresents, inputText, setInputText, inputTarget, setInputTarget, status, setStatus, handleFilter}) => {
 
@@ -41,8 +44,11 @@ const PresentList = ({ presents, setPresents, filteredPresents, inputText, setIn
             
             
            <p className="small-text">* Unless you empty the local storage</p> 
-
-           <button className="present-button center" onClick={closeImage}>Home</button>
+            <div className="home-button-div">
+                <button className="present-button" onClick={closeImage}>
+                    <FontAwesomeIcon icon={faHome} />
+                </button>
+           </div>
         </div>
     )
 }
