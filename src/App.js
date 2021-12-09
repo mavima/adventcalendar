@@ -40,8 +40,8 @@ function App() {
 
   const current = new Date();
   
-  const dateToday = `${current.getDate()}`
-  // const dateToday = 20
+  // const dateToday = `${current.getDate()}`
+  const dateToday = 20
 
 
   const enableDoors = day => {

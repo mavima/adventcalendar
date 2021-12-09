@@ -19,7 +19,7 @@ export const doorArray = [
   { id: 8, day: 8, link: "Memory", open: false, available: false, isVideo: false, isPicture: false, image: "https://i.fbcd.co/products/original/cute-xmas-single-image-01-2-f65777934095b1fd63d0981cf63b0247f2d3ceef1192eac1d0e798757a8d8644.jpg"  },
   { id: 9, day: 9, link: "http://photos1.blogger.com/x/blogger/1719/2914/1600/212333/reindeer_revenge.jpg", open: false, available: false, isVideo: false, isPicture: true, image: "http://www.lifesize-models.co.uk/custom/images/products/FUNNY%20XMAS%20REINDEER%20HEAD%20label%202261.jpg"  },
   { id: 10, day: 10, link: "Quiz", open: false, available: false, isVideo: false, isPicture: false, image: "https://vistapointe.net/images/rudolph-the-rednosed-reindeer-10.jpg"  },
-  { id: 11, day: 11, link: "https://i.pinimg.com/564x/71/59/d1/7159d185a4eb1a575307f1dc5d6360c6.jpg", open: false, available: false, isVideo: false, isPicture: false, image: ""  },
+  { id: 11, day: 11, link: "https://i.pinimg.com/564x/71/59/d1/7159d185a4eb1a575307f1dc5d6360c6.jpg", open: false, available: false, isVideo: false, isPicture: false, image: "https://library.kissclipart.com/20190913/ke/kissclipart-snowman-65efa1add1c31268.png"  },
   { id: 12, day: 12, link: "", open: false, available: false, isVideo: false, isPicture: false, image: "https://image.spreadshirtmedia.net/image-server/v1/mp/compositions/T1459A839PA4459PT28D184502963FS3399/views/1,width=378,height=378,backgroundColor=F2F2F2/joulun-tonttu.jpg"  },
   { id: 13, day: 13, link: "", open: false, available: false, isVideo: false, isPicture: false, image: ""  },
   { id: 14, day: 14, link: "", open: false, available: false, isVideo: false, isPicture: false, image: ""  },

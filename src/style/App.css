@@ -513,6 +513,13 @@ margin-bottom: 1.5vh;
   padding: 1px;
 }
 
+.whole-width {
+  width: 100%;
+}
+
+.no-margin {
+  margin: 0;
+}
 
 
 .back-home-button {

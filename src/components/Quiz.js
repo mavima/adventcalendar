@@ -87,6 +87,9 @@ const Quiz = ({questions, setQuestions, currentQuestion, setCurrentQuestion, set
     if (language === "finnish") {
         return (
             <div className="quiz-page">
+                <div className="home-button-div whole-width">
+                    <button className="present-button no-margin" onClick={closeImage}><FontAwesomeIcon icon={faHome} /></button>
+                </div>
                 <h1 className="quiz-title">Löydä oma jouluhahmosi</h1>
 
                 {showResult ? (
@@ -94,8 +97,7 @@ const Quiz = ({questions, setQuestions, currentQuestion, setCurrentQuestion, set
                         <div className="quiz-result">Sinun jouluhahmosi on: {character.text} </div>
                         <img className="character-img" src={character.src} alt={character.text} />
                         <div className="inline-btns">
-                            <button onClick={again} className="present-button margin-right">Uudelleen</button>
-                            <button className="present-button" onClick={closeImage}><FontAwesomeIcon icon={faHome} /></button>
+                            <button onClick={again} className="present-button">Uudelleen</button>
                         </div>
                     </div>
                 ) : (
@@ -119,6 +121,9 @@ const Quiz = ({questions, setQuestions, currentQuestion, setCurrentQuestion, set
     } else {
         return (
             <div className="quiz-page">
+                <div className="home-button-div whole-width">
+                    <button className="present-button no-margin" onClick={closeImage}><FontAwesomeIcon icon={faHome} /></button>
+                </div>
                 <h1 className="quiz-title">Christmas Quiz</h1>
 
                 {showResult ? (
@@ -127,7 +132,7 @@ const Quiz = ({questions, setQuestions, currentQuestion, setCurrentQuestion, set
                         <img className="character-img" src={character.src} alt={character.text} />
                         <div className="inline-btns">
                             <button onClick={again} className="present-button margin-right">Again</button>
-                            <button className="present-button" onClick={closeImage}><FontAwesomeIcon icon={faHome} /></button>
+
                         </div>
                     </div>
                 ) : (
