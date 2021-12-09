@@ -74,6 +74,7 @@ export const StyledDoor = styled.div`
         height: 80px;
         position: absolute;
         top: 0;
+        cursor: -webkit-grab;
     }
     .link-box {
         height: 30px;

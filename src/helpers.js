@@ -19,7 +19,7 @@ export const doorArray = [
   { id: 8, day: 8, link: "Memory", open: false, available: false, isVideo: false, isPicture: false, image: "https://i.fbcd.co/products/original/cute-xmas-single-image-01-2-f65777934095b1fd63d0981cf63b0247f2d3ceef1192eac1d0e798757a8d8644.jpg"  },
   { id: 9, day: 9, link: "http://photos1.blogger.com/x/blogger/1719/2914/1600/212333/reindeer_revenge.jpg", open: false, available: false, isVideo: false, isPicture: true, image: "http://www.lifesize-models.co.uk/custom/images/products/FUNNY%20XMAS%20REINDEER%20HEAD%20label%202261.jpg"  },
   { id: 10, day: 10, link: "Quiz", open: false, available: false, isVideo: false, isPicture: false, image: "https://vistapointe.net/images/rudolph-the-rednosed-reindeer-10.jpg"  },
-  { id: 11, day: 11, link: "https://i.pinimg.com/564x/71/59/d1/7159d185a4eb1a575307f1dc5d6360c6.jpg", open: false, available: false, isVideo: false, isPicture: false, image: ""  },
+  { id: 11, day: 11, link: "https://i.pinimg.com/564x/71/59/d1/7159d185a4eb1a575307f1dc5d6360c6.jpg", open: false, available: false, isVideo: false, isPicture: false, image: "https://library.kissclipart.com/20190913/ke/kissclipart-snowman-65efa1add1c31268.png"  },
   { id: 12, day: 12, link: "", open: false, available: false, isVideo: false, isPicture: false, image: "https://image.spreadshirtmedia.net/image-server/v1/mp/compositions/T1459A839PA4459PT28D184502963FS3399/views/1,width=378,height=378,backgroundColor=F2F2F2/joulun-tonttu.jpg"  },
   { id: 13, day: 13, link: "", open: false, available: false, isVideo: false, isPicture: false, image: ""  },
   { id: 14, day: 14, link: "", open: false, available: false, isVideo: false, isPicture: false, image: ""  },
@@ -107,7 +107,76 @@ options: [
       },
 ]
 
+const quizQuestionsFinnish = [
+  {
+    questionText: "Mikä on parasta jouluruokaa?",
+id: Math.floor(Math.random() * 100),
+     options: [
+      { answerText: "Suklaa", chosen: false, points: 1 },
+      { answerText: "Pizza tai sushi", chosen: false, points: 0 },
+      { answerText: "Kinkku ja lanttulaatikko", chosen: false, points: 3 },
+      { answerText: "Lohi ja sienisalaatti", chosen: false, points: 2 },
+    ],
+},
+{
+  questionText: "Mitä teet mieluiten joulupäivänä lounaan jälkeen?", id: Math.floor(Math.random() * 100),
+  options: [
+    { answerText: "Pelaan lautapelejä tai luen", chosen: false, points: 2 },
+    { answerText: "Syön vähän lisää", chosen: false, points: 1 },
+    { answerText: "Lähden kävelylle tai pulkkamäkeen", chosen: false, points: 3 },
+    { answerText: "Pelaan tietokonepelejä", chosen: false, points: 0 },
+  ],
+},
+{
+questionText: "Mitä annat äidillesi joululahjaksi?", id: Math.floor(Math.random() * 100),
+options: [
+  { answerText: "En mitään, pitäisikö?", chosen: false, points: 0 },
+  { answerText: "Neulon itse villapaidan tai maalaan taulun", chosen: false, points: 3 },
+  { answerText: "Kirjan", chosen: false, points: 2 },
+  { answerText: "En tiedä vielä", chosen: false, points: 1 },
+],
+},
+{
+questionText: "Mikä on paras joululaulu?", id: Math.floor(Math.random() * 100),
+options: [
+  { answerText: "All I Want For Christmas Is You", chosen: false, points: 1 },
+  { answerText: "Joulupukki, joulupukki", chosen: false, points: 2 },
+  { answerText: "Maa on niin kaunis", chosen: false, points: 3 },
+  { answerText: "Inhoan joulumusiikkia", chosen: false, points: 0 },
+],
+},
+{
+  questionText: "Mitä katsot mielelläsi TV:stä jouluna?", id: Math.floor(Math.random() * 100),
+  options: [
+    { answerText: "Niko lentäjän poika", chosen: false, points: 2 },
+    { answerText: "Yksin kotona", chosen: false, points: 1 },
+    { answerText: "Joulurauhan julistus", chosen: false, points: 3 },
+    { answerText: "Jonkun Bond-elokuvan", chosen: false, points: 0 },
+  ],
+  },
+  {
+    questionText: "Mikä on tärkeintä joulussa?", id: Math.floor(Math.random() * 100),
+    options: [
+      { answerText: "Saa viettää aikaa perheen kanssa", chosen: false, points: 2 },
+      { answerText: "Jouluevankeliumin sanoma", chosen: false, points: 3 },
+      { answerText: "On loma", chosen: false, points: 0 },
+      { answerText: "Lahjat!", chosen: false, points: 1 },
+    ],
+    },
+    {
+      questionText: "Mieluisin joululahjasi?", id: Math.floor(Math.random() * 100),
+      options: [
+        { answerText: "Itse neulotut villasukat", chosen: false, points: 3 },
+        { answerText: "Lahjakortti", chosen: false, points: 0 },
+        { answerText: "Sukset tai pulkka", chosen: false, points: 2 },
+        { answerText: "Pelikonsoli", chosen: false, points: 1 },
+      ],
+      },
+]
+
+
 export const createCalendar = () => shuffle(doorArray);
 
 
 export const createQuiz = () => {return quizQuestions};
+export const createFinnishQuiz = () => {return quizQuestionsFinnish}
