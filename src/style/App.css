@@ -178,6 +178,7 @@
   font-weight: bolder;
   border: 1px solid #0d1496;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 
 .present-list {
