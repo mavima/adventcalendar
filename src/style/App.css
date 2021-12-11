@@ -47,7 +47,7 @@
 
 
 /* small tablet */
-@media only screen and (min-width: 600px) {
+@media only screen and (max-width: 600px) {
 
   .door-grid {
     grid-template-columns: repeat(4, 1fr);
@@ -58,6 +58,14 @@
     width: 120px !important;
     height: 120px !important;
   }
+
+  .recipe-box {
+    flex-direction: column;
+  }
+
+  /* .flexbox {
+    flex-direction: column;
+  } */
 }
 
 /* big tablet */
@@ -520,6 +528,86 @@ margin-bottom: 1.5vh;
 
 .no-margin {
   margin: 0;
+}
+
+/* style for recipe */
+
+.recipe-title {
+  font-family: 'Praise', cursive;
+  font-size: 2rem;
+  font-weight: lighter;
+  text-shadow: 1px 1px #ffffff;
+  text-align: center;
+  /* background-size: contain;
+  background-repeat: no-repeat; */
+  width:fit-content;
+  margin: auto;
+}
+
+.flexbox {
+  display: flex;
+  justify-content: space-around;
+}
+
+.cake-img {
+  max-height: 200px;
+  width: auto;
+  opacity: 0.75;
+  border: 3px solid white;
+  justify-self: flex-end;
+}
+
+.amount-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.recipe-modify-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 350px;
+    margin: auto;
+}
+
+.recipe-modify-container form {
+  margin-top: 0.7em;
+}
+
+.recipe-form-input {
+  max-width: 20px;
+  width: fit-content;
+  border-radius: 6px;
+  border: 1px solid #0d1496;
+  text-align: center;
+  margin: 3px;
+}
+
+.recipe-submit {
+  border-radius: 6px;
+  border: 1px solid #718DA2;
+  background-color: #718DA2;
+  color: white;
+  text-align: center;
+  margin: 3px;
+}
+
+.recipe-box {
+  display: flex;
+  width: 80%;
+  margin: auto;
+}
+
+.doses {
+  margin-top: 1rem;
+  min-width: 200px;
+}
+
+.recipe-instructions {
+  padding-left: 0 !important; 
+}
+
+.recipe-instructions li {
+  list-style-type: none;
 }
 
 
