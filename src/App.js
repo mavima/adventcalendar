@@ -10,6 +10,7 @@ import PresentList from './components/PresentList';
 import NotFound from './components/NotFound';
 import Memory from './components/Memory';
 import Quiz from './components/Quiz';
+import Recipe from './components/Recipe';
 
 import './style/App.css';
 
@@ -35,6 +36,10 @@ function App() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showResult, setShowResult] = useState(false);
   const [character, setCharacter] = useState(null)
+  const [dose, setDose] = useState(null)
+  const [doses, setDoses] = useState([])
+  const [recipe, setRecipe] = useState(null)
+  const [portions, setPortions] = useState(10);
 
 
 
@@ -191,6 +196,20 @@ function App() {
               character={character}
               setCharacter={setCharacter}
             />
+          </Route>
+          <Route path="/recipe">
+            <Recipe
+              recipe={recipe}
+              setRecipe={setRecipe}
+              dose={dose}
+              setDose={setDose}
+              doses={doses}
+              setDoses={setDoses}
+              portions={portions}
+              setPortions={setPortions}
+              language={language}
+              setLanguage={setLanguage}
+              />
           </Route>
           <Route>
             <NotFound />
