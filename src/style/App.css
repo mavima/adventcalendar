@@ -120,9 +120,9 @@
     padding-left: 5px !important;
   }
 
-  .card {
-    width: 75px;
-    height: 75px;
+  .door-grid{
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(8, 1fr);
   }
 
   .recipe-img-container {
