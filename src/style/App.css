@@ -549,6 +549,12 @@ margin-bottom: 1.5vh;
   justify-content: space-around;
 }
 
+.recipe-img-container {
+  width: 80%;
+  max-width: 800px;
+  margin: auto;
+}
+
 .cake-img {
   max-height: 200px;
   width: auto;

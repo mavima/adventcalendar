@@ -11,6 +11,7 @@ import finnish from '../images/finnish.png';
 const Recipe = ({dose, setDose, doses, setDoses, recipe, setRecipe, portions, setPortions, language, setLanguage}) => {
 
     const englishDoses = [
+        {id:Math.floor(Math.random() * 100), amount: null, type: "", ingredient: "Brownie layer:"},
         {id:Math.floor(Math.random() * 100), amount: 75, type: "g", ingredient: "Dark chocolate"},
         {id:Math.floor(Math.random() * 100), amount: 50, type: "g", ingredient: "Butter"},
         {id:Math.floor(Math.random() * 100), amount: 1, type: "dl", ingredient: "Sugar"},
@@ -19,10 +20,12 @@ const Recipe = ({dose, setDose, doses, setDoses, recipe, setRecipe, portions, se
         {id:Math.floor(Math.random() * 100), amount: 1, type: "", ingredient: "Egg"},
         {id:Math.floor(Math.random() * 100), amount: 1, type: "tbsp", ingredient: "Cocoa powder"},
         {id:Math.floor(Math.random() * 100), amount: 1, type: "dl", ingredient: "Flour"},
+        {id:Math.floor(Math.random() * 100), amount: null, type: "", ingredient: "Mousse layer:"},
         {id:Math.floor(Math.random() * 100), amount: 3, type: "dl", ingredient: "Cream"},
         {id:Math.floor(Math.random() * 100), amount: 300, type: "g", ingredient: "Cream cheese"},
         {id:Math.floor(Math.random() * 100), amount: 250, type: "g", ingredient: "Chocolate"},
         {id:Math.floor(Math.random() * 100), amount: 1, type: "tbsp", ingredient: "Irish cream liqueur "},
+        {id:Math.floor(Math.random() * 100), amount: null, type: "", ingredient: "Rashberry layer:"},
         {id:Math.floor(Math.random() * 100), amount: 4, type: "dl", ingredient: "Rashberries"},
         {id:Math.floor(Math.random() * 100), amount: 1, type: "dl", ingredient: "Rashberry juice"},
         {id:Math.floor(Math.random() * 100), amount: 0.5, type: "dl", ingredient: "Sugar"},
@@ -31,6 +34,7 @@ const Recipe = ({dose, setDose, doses, setDoses, recipe, setRecipe, portions, se
     ]
 
     const finnishDoses = [
+        {id:Math.floor(Math.random() * 100), amount: null, type: "", ingredient: "Brownie-kerros:"},
         {id:Math.floor(Math.random() * 100), amount: 75, type: "g", ingredient: "Tummaa suklaata"},
         {id:Math.floor(Math.random() * 100), amount: 50, type: "g", ingredient: "Voita"},
         {id:Math.floor(Math.random() * 100), amount: 1, type: "dl", ingredient: "Sokeria"},
@@ -39,10 +43,12 @@ const Recipe = ({dose, setDose, doses, setDoses, recipe, setRecipe, portions, se
         {id:Math.floor(Math.random() * 100), amount: 1, type: "", ingredient: "Muna"},
         {id:Math.floor(Math.random() * 100), amount: 1, type: "rkl", ingredient: "Kaakaojauhetta"},
         {id:Math.floor(Math.random() * 100), amount: 1, type: "dl", ingredient: "Vehnäjauhoa"},
+        {id:Math.floor(Math.random() * 100), amount: null, type: "", ingredient: "Mousse-kerros:"},
         {id:Math.floor(Math.random() * 100), amount: 3, type: "dl", ingredient: "Kuohukermaa"},
         {id:Math.floor(Math.random() * 100), amount: 300, type: "g", ingredient: "Tuorejuustoa"},
         {id:Math.floor(Math.random() * 100), amount: 250, type: "g", ingredient: "Suklaata"},
         {id:Math.floor(Math.random() * 100), amount: 1, type: "rkl", ingredient: "Irish cream likööriä "},
+        {id:Math.floor(Math.random() * 100), amount: null, type: "", ingredient: "Vadelmahyytelö:"},
         {id:Math.floor(Math.random() * 100), amount: 4, type: "dl", ingredient: "Vadelmia"},
         {id:Math.floor(Math.random() * 100), amount: 1, type: "dl", ingredient: "Vadelmamehua"},
         {id:Math.floor(Math.random() * 100), amount: 0.5, type: "dl", ingredient: "Sokeria"},
@@ -91,8 +97,10 @@ const Recipe = ({dose, setDose, doses, setDoses, recipe, setRecipe, portions, se
             </div>
             <div className="recipe present-list">
             <h2 className="recipe-title">Suklaajuustokakku vadelmahatulla</h2>
-            <img className="cake-img" src={cake} alt="chocolate rashberry cheesecake"/>
-            <img src={english} onClick={englishRecipe} alt="english" className="flag-button"/>
+            <div className="recipe-img-container">
+                <img className="cake-img" src={cake} alt="chocolate rashberry cheesecake"/>
+                <img src={english} onClick={englishRecipe} alt="english" className="flag-button"/>
+            </div>
             <div className="recipe-modify-container">
                 <p>Muuta annosmäärää:</p>
                 <form className="changeAmount" onSubmit={amountChange}>
@@ -149,8 +157,10 @@ const Recipe = ({dose, setDose, doses, setDoses, recipe, setRecipe, portions, se
             </div>
             <div className="recipe present-list">
                 <h2 className="recipe-title">Chocolate Rashberry Cheesecake</h2>
-                <img className="cake-img" src={cake} alt="chocolate rashberry cheesecake"/>
-                <img src={finnish} onClick={finnishRecipe} alt="finnish" className="flag-button"/>
+                <div className="recipe-img-container">
+                    <img className="cake-img" src={cake} alt="chocolate rashberry cheesecake"/>
+                    <img src={finnish} onClick={finnishRecipe} alt="finnish" className="flag-button"/>
+                </div>
                 <div className="recipe-modify-container">
                     <p>Change number of portions:</p>
                     <form className="changeAmount" onSubmit={amountChange}>
