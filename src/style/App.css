@@ -125,25 +125,9 @@
     height: 75px;
   }
 
-  /* .card > .card-front {
-    width: 100px;
-    height: 100px;
+  .recipe-img-container {
+    width: 100%;
   }
-
-  .card > .card-front > img {
-    width: 100px;
-    height: 100px;
-  }
-
-  .card > .card-back {
-    width: 100px;
-    height: 100px;
-  }
-
-  .card > .card-back > img {
-    width: 100px;
-    height: 100px; */
-  /* } */
 }
 
 /* tiny mobile */
@@ -547,6 +531,12 @@ margin-bottom: 1.5vh;
 .flexbox {
   display: flex;
   justify-content: space-around;
+}
+
+.recipe-img-container {
+  width: 80%;
+  max-width: 800px;
+  margin: auto;
 }
 
 .cake-img {
