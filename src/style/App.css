@@ -599,6 +599,14 @@ margin-bottom: 1.5vh;
   list-style-type: none;
 }
 
+/* style for snow worm */
+
+.game-canvas{
+min-width: 300px;
+min-height: 500px;
+background-color: lightblue;
+}
+
 
 .back-home-button {
   padding: 5px;

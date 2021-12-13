@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { createCalendar } from "./helpers";
 import { createQuiz } from './helpers';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -11,6 +11,7 @@ import NotFound from './components/NotFound';
 import Memory from './components/Memory';
 import Quiz from './components/Quiz';
 import Recipe from './components/Recipe';
+import Snake from './components/Snake';
 
 import './style/App.css';
 
@@ -40,6 +41,14 @@ function App() {
   const [doses, setDoses] = useState([])
   const [recipe, setRecipe] = useState(null)
   const [portions, setPortions] = useState(10);
+  const [snake, setSnake] = useState([[8, 7], [8, 8]]);
+  const [ball, setBall] = useState([8, 3]);
+  const [dir, setDir] = useState([0, -1]);
+  const [speed, setSpeed] = useState(1500);
+  const [gameOver, setGameOver] = useState(false);
+
+
+  const canvasRef = useRef();
 
 
 
@@ -211,6 +220,22 @@ function App() {
               setLanguage={setLanguage}
               />
           </Route>
+          {/* <Route path="/snowworm">
+            <Snake
+              snake={snake}
+              setSnake={setSnake}
+              ball={ball}
+              setBall={setBall}
+              dir={dir}
+              setDir={setDir}
+              speed={speed}
+              setSpeed={setSpeed}
+              gameOver={gameOver}
+              setGameOver={setGameOver}
+              canvasRef={canvasRef}
+
+            />
+          </Route> */}
           <Route>
             <NotFound />
           </Route>
