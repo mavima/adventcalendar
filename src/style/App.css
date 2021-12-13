@@ -564,7 +564,8 @@ margin-bottom: 1.5vh;
 }
 
 .recipe-form-input {
-  max-width: 20px;
+  max-width: 30px;
+  min-width: 15px;
   width: fit-content;
   border-radius: 6px;
   border: 1px solid #0d1496;
