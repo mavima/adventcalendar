@@ -24,8 +24,8 @@ export const doorArray = [
   { id: 13, day: 13, link: "recipe", open: false, available: false, isVideo: false, isPicture: false, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc_3cv5QPKl1F9csgSQdyOWjWbCJqE-Rm4tw&usqp=CAU"   },
   { id: 14, day: 14, link: "https://lh6.googleusercontent.com/proxy/XEvUGdrsXrS_p4Cisv3zr1PTztZeWPvWPKa0sftyGVndFlo1f-0R2C1gzwheQHJnYwvCjOhMBLwLoT8ZXFDwebjGg0HzmrTVrI_TiCvOYE_kQ1qFfE3LM4fisiUN=s0-d", open: false, available: false, isVideo: false, isPicture: true, image: "https://static.turbosquid.com/Preview/2018/11/27__02_34_59/SnowmanSign.jpg2E34238C-22D6-4485-A5D7-75F2CF8026EFLarge.jpg"  },
   { id: 15, day: 15, link: "sOyJ3FExfSE", open: false, available: false, isVideo: true, isPicture: false, image: "https://clipart.world/wp-content/uploads/2020/06/cute-snowman.jpg"  },
-  { id: 16, day: 16, link: "", open: false, available: false, isVideo: false, isPicture: false, image: ""  },
-  { id: 17, day: 17, link: "", open: false, available: false, isVideo: false, isPicture: false, image: ""  },
+  { id: 16, day: 16, link: "https://i.pinimg.com/564x/25/f7/d8/25f7d8d05eb111f17df410aebad2069d.jpg", open: false, available: false, isVideo: false, isPicture: true, image: "https://www.nicepng.com/png/detail/386-3868490_polar-bear-clipart-winter-baby-polar-bears-clip.png"  },
+  { id: 17, day: 17, link: "https://mariam.codes/elf/elf.html", open: false, available: false, isVideo: false, isPicture: false, image: "https://e7.pngegg.com/pngimages/118/981/png-clipart-girl-wearing-santa-claus-costume-santa-claus-christmas-elf-elf-girl-elf-fictional-character-thumbnail.png"  },
   { id: 18, day: 18, link: "", open: false, available: false, isVideo: false, isPicture: false, image: ""  },
   { id: 19, day: 19, link: "", open: false, available: false, isVideo: false, isPicture: false, image: ""  },
   { id: 20, day: 20, link: "", open: false, available: false, isVideo: false, isPicture: false, image: ""  },
@@ -180,3 +180,5 @@ export const createCalendar = () => shuffle(doorArray);
 
 export const createQuiz = () => {return quizQuestions};
 export const createFinnishQuiz = () => {return quizQuestionsFinnish}
+
+export default shuffle;

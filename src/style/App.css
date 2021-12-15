@@ -601,12 +601,19 @@ margin-bottom: 1.5vh;
 
 /* style for snow worm */
 
-.game-canvas{
+/* .game-canvas{
 min-width: 300px;
 min-height: 500px;
 background-color: lightblue;
-}
+} */
 
+/* style for story */
+
+.story-container {
+  min-height: 300px;
+  min-width: 300px;
+  background-color: lightcyan;
+}
 
 .back-home-button {
   padding: 5px;
