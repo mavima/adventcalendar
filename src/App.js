@@ -11,7 +11,8 @@ import NotFound from './components/NotFound';
 import Memory from './components/Memory';
 import Quiz from './components/Quiz';
 import Recipe from './components/Recipe';
-import Snake from './components/Snake';
+import Story from './components/Story';
+// import Snake from './components/Snake';
 
 import './style/App.css';
 
@@ -41,11 +42,12 @@ function App() {
   const [doses, setDoses] = useState([])
   const [recipe, setRecipe] = useState(null)
   const [portions, setPortions] = useState(10);
-  const [snake, setSnake] = useState([[8, 7], [8, 8]]);
-  const [ball, setBall] = useState([8, 3]);
-  const [dir, setDir] = useState([0, -1]);
-  const [speed, setSpeed] = useState(1500);
-  const [gameOver, setGameOver] = useState(false);
+  const [adjectives, setAdjectives] = useState([]);
+  // const [snake, setSnake] = useState([[8, 7], [8, 8]]);
+  // const [ball, setBall] = useState([8, 3]);
+  // const [dir, setDir] = useState([0, -1]);
+  // const [speed, setSpeed] = useState(1500);
+  // const [gameOver, setGameOver] = useState(false);
 
 
   const canvasRef = useRef();
@@ -93,13 +95,6 @@ function App() {
     setDoors(updatedDoors);
   };
 
-  // // Logic for displaying picture
-
-  // const displayImage = (doors) => {
-  //   doors.map((door) => {
-  //     door.link ===  
-  //   })
-  // }
 
   // Logic for present list
 
@@ -220,6 +215,14 @@ function App() {
               setLanguage={setLanguage}
               />
           </Route>
+          {/* <Route path="/story">
+            <Story
+              adjectives={adjectives}
+              setAdjectives={setAdjectives}
+              inputText={inputText}
+              setInputText={setInputText}
+            />
+          </Route> */}
           {/* <Route path="/snowworm">
             <Snake
               snake={snake}
