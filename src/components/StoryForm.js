@@ -8,10 +8,9 @@ const StoryForm = ({inputText, setInputText, setAdjectives, adjectives}) => {
 
     const handleSubmit = (e) => {
         e.preventDefault(); 
-        console.log(adjectives)
         setAdjectives([
             ...adjectives,
-            { text: inputText, id: Math.random() * 10000 }
+            { text: inputText, key: Math.random() * 10000 }
         ]);
         setInputText("");
     };

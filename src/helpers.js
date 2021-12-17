@@ -25,14 +25,14 @@ export const doorArray = [
   { id: 14, day: 14, link: "https://lh6.googleusercontent.com/proxy/XEvUGdrsXrS_p4Cisv3zr1PTztZeWPvWPKa0sftyGVndFlo1f-0R2C1gzwheQHJnYwvCjOhMBLwLoT8ZXFDwebjGg0HzmrTVrI_TiCvOYE_kQ1qFfE3LM4fisiUN=s0-d", open: false, available: false, isVideo: false, isPicture: true, image: "https://static.turbosquid.com/Preview/2018/11/27__02_34_59/SnowmanSign.jpg2E34238C-22D6-4485-A5D7-75F2CF8026EFLarge.jpg"  },
   { id: 15, day: 15, link: "sOyJ3FExfSE", open: false, available: false, isVideo: true, isPicture: false, image: "https://clipart.world/wp-content/uploads/2020/06/cute-snowman.jpg"  },
   { id: 16, day: 16, link: "https://i.pinimg.com/564x/25/f7/d8/25f7d8d05eb111f17df410aebad2069d.jpg", open: false, available: false, isVideo: false, isPicture: true, image: "https://www.nicepng.com/png/detail/386-3868490_polar-bear-clipart-winter-baby-polar-bears-clip.png"  },
-  { id: 17, day: 17, link: "https://mariam.codes/elf/elf.html", open: false, available: false, isVideo: false, isPicture: false, image: "https://e7.pngegg.com/pngimages/118/981/png-clipart-girl-wearing-santa-claus-costume-santa-claus-christmas-elf-elf-girl-elf-fictional-character-thumbnail.png"  },
-  { id: 18, day: 18, link: "", open: false, available: false, isVideo: false, isPicture: false, image: ""  },
-  { id: 19, day: 19, link: "", open: false, available: false, isVideo: false, isPicture: false, image: ""  },
-  { id: 20, day: 20, link: "", open: false, available: false, isVideo: false, isPicture: false, image: ""  },
-  { id: 21, day: 21, link: "", open: false, available: false, isVideo: false, isPicture: false, image: ""  },
-  { id: 22, day: 22, link: "", open: false, available: false, isVideo: false, isPicture: false, image: ""  },
-  { id: 23, day: 23, link: "", open: false, available: false, isVideo: false, isPicture: false, image: ""  },
-  { id: 24, day: 24, link: "", open: false, available: false, isVideo: false, isPicture: false, image: ""  },
+  { id: 17, day: 17, link: "https://mariam.codes/elf/elf.html", open: false, available: false, isVideo: false, isPicture: false, image: "https://img.freepik.com/free-vector/happy-cute-little-kid-boy-girl-wearing-green-elf-christmas-costume_97632-3323.jpg?size=338&ext=jpg"  },
+  { id: 18, day: 18, link: "https://i.pinimg.com/564x/3a/1a/01/3a1a017835b57cccf76798c0999dc072.jpg", open: false, available: false, isVideo: false, isPicture: true, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfsIFh6mppu4HXmhGVd1_drPmJVDXHPKc-rQ&usqp=CAU"  },
+  { id: 19, day: 19, link: "Icx7hBWeULM", open: false, available: false, isVideo: true, isPicture: false, image: "https://i.pinimg.com/736x/9d/98/64/9d986425e5a3a2bea36bfca5d061ad07.jpg"  },
+  { id: 20, day: 20, link: "https://i.pinimg.com/564x/1b/7f/75/1b7f7554ee550025ed9fd042b7660dd8.jpg", open: false, available: false, isVideo: false, isPicture: true, image: "https://lh3.googleusercontent.com/proxy/O_1djYAF4wYYRPSi2y_BqOmKur-h1OZ7XlKk1NnIatImfnui2aH-eIo4LaRd8PGrII6pZdkS1DQ5ZlPGEVSVlkcx"  },
+  { id: 21, day: 21, link: "20evunLzSgk", open: false, available: false, isVideo: true, isPicture: false, image: "https://i.pinimg.com/originals/9f/84/76/9f84766387dfc0bc51b238c7dc1a9a98.gif"  },
+  { id: 22, day: 22, link: "https://i.pinimg.com/originals/cb/26/da/cb26da98007a9e0959eabaded7434fab.gif", open: false, available: false, isVideo: false, isPicture: true, image: "https://i.pinimg.com/736x/09/06/fb/0906fbb518b675036e71d4a7a70ee4e5--snowman-clipart-christmas-clipart.jpg"  },
+  { id: 23, day: 23, link: "zM8XVqeKJvQ", open: false, available: false, isVideo: true, isPicture: false, image: "https://us.123rf.com/450wm/sivanova/sivanova1711/sivanova171100030/90963796-a-cute-christmas-reindeer-is-engaged-in-yoga-meditates-lotus-pose-it-s-wearing-a-warm-knitted-sweate.jpg?ver=6"  },
+  { id: 24, day: 24, link: "Story", open: false, available: false, isVideo: false, isPicture: false, image: "https://lh3.googleusercontent.com/proxy/G6tMvoArIU69cCjqegL-4g9iDjAgW34V80cZ7besNS0XaD_HJkT3xvKijjkdjo3Yi-aKZ8LeWc6l0tUFqr6aPidd7HZSQ6ko4jP3cw"  },
 
 
 

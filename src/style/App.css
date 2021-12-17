@@ -615,6 +615,31 @@ background-color: lightblue;
   background-color: lightcyan;
 }
 
+/* style for piano */
+
+.piano-container {
+  min-height: 300px;
+  min-width: 300px;
+  background-color: lightcyan;
+  padding-top: 2vh;
+}
+
+.note-box {
+  display: flex;
+  justify-content: center;
+  margin: 3vh 0;
+}
+
+.carol-img {
+  margin: auto;
+}
+
+.keyboard {
+  max-width: 700px;
+  margin: auto;
+  margin-top: 20px;
+}
+
 .back-home-button {
   padding: 5px;
   border-radius: 6px;
