@@ -12,6 +12,7 @@ import Memory from './components/Memory';
 import Quiz from './components/Quiz';
 import Recipe from './components/Recipe';
 import Story from './components/Story';
+import Song from './components/Song';
 // import Snake from './components/Snake';
 
 import './style/App.css';
@@ -43,6 +44,7 @@ function App() {
   const [recipe, setRecipe] = useState(null)
   const [portions, setPortions] = useState(10);
   const [adjectives, setAdjectives] = useState([]);
+
   // const [snake, setSnake] = useState([[8, 7], [8, 8]]);
   // const [ball, setBall] = useState([8, 3]);
   // const [dir, setDir] = useState([0, -1]);
@@ -50,14 +52,10 @@ function App() {
   // const [gameOver, setGameOver] = useState(false);
 
 
-  const canvasRef = useRef();
-
-
-
   const current = new Date();
   
   const dateToday = `${current.getDate()}`
-  // const dateToday = 20
+  // const dateToday = 25
 
 
   const enableDoors = day => {
@@ -215,14 +213,18 @@ function App() {
               setLanguage={setLanguage}
               />
           </Route>
-          {/* <Route path="/story">
+          <Route path="/story">
             <Story
               adjectives={adjectives}
               setAdjectives={setAdjectives}
               inputText={inputText}
               setInputText={setInputText}
             />
-          </Route> */}
+          </Route>
+          <Route path="/song">
+            <Song />
+          </Route>
+
           {/* <Route path="/snowworm">
             <Snake
               snake={snake}

@@ -23,7 +23,8 @@ const Story = ({setAdjectives, adjectives, inputText, setInputText, inputTarget,
             />
             <ul className="">
             {adjectives.map(adjective => (
-                <li>{adjective.text}</li>
+                
+                <li key={adjective.key}>{adjective.text}</li>
             ))}
             </ul>
         </div>
@@ -35,7 +36,7 @@ const Story = ({setAdjectives, adjectives, inputText, setInputText, inputTarget,
         return(
             <div className="story-container">
                 <h1>Christmas Story</h1>
-                <p>This is a history of a {adjectives[0]} reindeer that lived in a {adjectives[1]} forest.</p>
+                <p>This is a history of a {adjectives[0].text} reindeer that lived in a {adjectives[1].text} forest.</p>
             </div>
         )
     }
