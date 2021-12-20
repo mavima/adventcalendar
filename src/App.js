@@ -219,6 +219,8 @@ function App() {
               setAdjectives={setAdjectives}
               inputText={inputText}
               setInputText={setInputText}
+              language={language}
+              setLanguage={setLanguage}
             />
           </Route>
           <Route path="/song">

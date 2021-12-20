@@ -16,7 +16,7 @@ const StoryForm = ({inputText, setInputText, setAdjectives, adjectives}) => {
     };
 
     return (
-        <form>
+        <form className="story-form">
             <input value={inputText} onChange={handleInput} type="text" className="present-input" />
             <button onClick={handleSubmit} className="present-button" type="submit">
                 Add +

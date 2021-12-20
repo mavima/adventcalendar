@@ -4,8 +4,6 @@ import _ from 'lodash';
 import 'react-piano/dist/styles.css';
 import SoundfontProvider from '../SoundfontProvider';
 import PianoWithRecording from '../PianoWithRecording';
-import Melody from './Melody';
-// import Melody from './Melody'
 
 // import carol from '../images/carol.png';
 
@@ -66,11 +64,6 @@ class Song extends React.Component {
     })
   }
 
-  win = () => {
-    if (this.state.melody === [52, 53]) {
-      alert("hyy")
-    }
-  }
 
   onClickPlay = () => {
     this.setRecording({
