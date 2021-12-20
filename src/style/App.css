@@ -610,9 +610,35 @@ background-color: lightblue;
 /* style for story */
 
 .story-container {
-  min-height: 300px;
-  min-width: 300px;
-  background-color: lightcyan;
+  background-color:  #fdf8eb;
+  text-align: left;
+}
+
+.story-title {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.story-form {
+display: flex;
+justify-content: center;
+}
+
+.story-button {
+  padding: 8px;
+  background-color: #0d1496;
+  color: white;
+  border-radius: 8px;
+  font-weight: bolder;
+  border: 1px solid #0d1496;
+  margin-bottom: 20px;
+  cursor: pointer;
+  width: fit-content;
+  margin: 0.5rem 1rem 0 0;
+}
+
+.right-corner {
+  margin-left: 90%;
 }
 
 /* style for piano */
