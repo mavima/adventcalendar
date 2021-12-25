@@ -15,7 +15,6 @@ const Story = ({setAdjectives, adjectives, inputText, setInputText, inputTarget,
 
     const [, updateState] = React.useState();
     const reOrder = React.useCallback(() => updateState({}), []);
-    console.log("render");
 
     const start = () => {
         setAdjectives([])
