@@ -41,8 +41,8 @@ const Video = ({doors}) => {
             <div className="picture-frame">
 
                 { doors.map(door => (
-                    <div className="video-frame">
-                        {pageId == door.id ? <VideoEmbed embedId={door.link}/> 
+                    <div className="video-frame" key={door.id}>
+                        {pageId == door.id ? <VideoEmbed embedId={door.link} key={door.id}/> 
                         : null}
                     </div>
             ))} 

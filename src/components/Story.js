@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import StoryForm from './StoryForm';
 import shuffle from '../helpers';
 

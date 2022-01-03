@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect} from "react";
 import { createCalendar } from "./helpers";
 import { createQuiz } from './helpers';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -12,8 +12,7 @@ import Memory from './components/Memory';
 import Quiz from './components/Quiz';
 import Recipe from './components/Recipe';
 import Story from './components/Story';
-import Song from './components/Song';
-// import Snake from './components/Snake';
+
 
 import './style/App.css';
 
@@ -45,17 +44,11 @@ function App() {
   const [portions, setPortions] = useState(10);
   const [adjectives, setAdjectives] = useState([]);
 
-  // const [snake, setSnake] = useState([[8, 7], [8, 8]]);
-  // const [ball, setBall] = useState([8, 3]);
-  // const [dir, setDir] = useState([0, -1]);
-  // const [speed, setSpeed] = useState(1500);
-  // const [gameOver, setGameOver] = useState(false);
-
 
   const current = new Date();
   
-  const dateToday = `${current.getDate()}`
-  // const dateToday = 25
+  // const dateToday = `${current.getDate()}`
+  const dateToday = 25
 
 
   const enableDoors = day => {
@@ -117,6 +110,10 @@ function App() {
         break;
     }
   };
+
+  const createId = () => {
+    return Math.floor(Math.random())
+  }
 
   const saveLocalPresents = () => {
     localStorage.setItem('presents', JSON.stringify(presents));
@@ -223,26 +220,6 @@ function App() {
               setLanguage={setLanguage}
             />
           </Route>
-          <Route path="/song">
-            <Song />
-          </Route>
-
-          {/* <Route path="/snowworm">
-            <Snake
-              snake={snake}
-              setSnake={setSnake}
-              ball={ball}
-              setBall={setBall}
-              dir={dir}
-              setDir={setDir}
-              speed={speed}
-              setSpeed={setSpeed}
-              gameOver={gameOver}
-              setGameOver={setGameOver}
-              canvasRef={canvasRef}
-
-            />
-          </Route> */}
           <Route>
             <NotFound />
           </Route>
