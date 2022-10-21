@@ -1,11 +1,19 @@
 import React from 'react';
 import StoryForm from './StoryForm';
+import { useHistory } from "react-router-dom";
 import shuffle from '../helpers';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHome } from "@fortawesome/free-solid-svg-icons";
 
 import english from '../images/english.png';
 import finnish from '../images/finnish.png';
 
+
+
 const Story = ({setAdjectives, adjectives, inputText, setInputText, inputTarget, setInputTarget, language, setLanguage}) => {
+
+    const history = useHistory();
+    const closeImage = () => history.push('/');
 
     const createStory = () => {
         const shuffledList = shuffle(adjectives)
@@ -51,9 +59,60 @@ const Story = ({setAdjectives, adjectives, inputText, setInputText, inputTarget,
     if (language === "finnish") {
         if (adjectives.length < 20) {
             return (
+                <div>
+                    <div className="home-button-div whole-width">
+                        <button className="present-button no-margin" onClick={closeImage}><FontAwesomeIcon icon={faHome} /></button>
+                    </div>
+                    <div className="present-list story-container">
+                        <h1 className="story-title">Keksi 20 adjektiivia ja luo oma joulutarinasi</h1>
+                        <p>Pyydä apua perheeltä tai ystäviltä - se on hauskempaa yhdessä!</p>
+                        <StoryForm
+                        adjectives={adjectives}
+                        setAdjectives={setAdjectives}
+                        inputText={inputText}
+                        setInputText={setInputText}
+                        inputTarget={inputTarget}
+                        setInputTarget={setInputTarget}
+                        />
+                        <ol className="">
+                        {adjectives.map(adjective => (
+                            
+                            <li key={adjective.key}>{adjective.text}</li>
+                        ))}
+                        </ol>
+                        <img src={english} onClick={englishLang} alt="english" className="flag-button right-corner"/>
+                    </div>
+                </div>
+    
+            )} else {
+                createStory()
+
+            return(
+                <div>
+                    <div className="home-button-div whole-width">
+                        <button className="present-button no-margin" onClick={closeImage}><FontAwesomeIcon icon={faHome} /></button>
+                    </div>
+                    <div className="present-list story-container">
+                        <h1 className="recipe-title">Joulutarina</h1>
+                        <p>{finnishStory}</p>
+                        <button className="story-button" onClick={reOrder}>Sekoita adjektiivit</button>
+                        <button className="story-button" onClick={start}>Kokeile uudelleen</button>
+                        <img src={english} onClick={englishLang} alt="english" className="flag-button right-corner"/>
+                    </div>
+                </div>
+            )
+
+            }
+    } else {
+        if (adjectives.length < 20) {
+        return (
+            <div>
+                <div className="home-button-div whole-width">
+                    <button className="present-button no-margin" onClick={closeImage}><FontAwesomeIcon icon={faHome} /></button>
+                </div>
                 <div className="present-list story-container">
-                    <h1 className="story-title">Keksi 20 adjektiivia ja luo oma joulutarinasi</h1>
-                    <p>Pyydä apua perheeltä tai ystäviltä - se on hauskempaa yhdessä!</p>
+                    <h1 className="story-title">Give 20 adjectives to write your own Christmas story</h1>
+                    <p>Ask friends or family to join - it's more fun together</p>
                     <StoryForm
                     adjectives={adjectives}
                     setAdjectives={setAdjectives}
@@ -68,58 +127,25 @@ const Story = ({setAdjectives, adjectives, inputText, setInputText, inputTarget,
                         <li key={adjective.key}>{adjective.text}</li>
                     ))}
                     </ol>
-                    <img src={english} onClick={englishLang} alt="english" className="flag-button right-corner"/>
+                    <img src={finnish} onClick={finnishLang} alt="english" className="flag-button right-corner"/>
                 </div>
-    
-            )} else {
-                createStory()
-
-            return(
-                <div className="present-list story-container">
-                    <h1 className="recipe-title">Joulutarina</h1>
-                    <p>{finnishStory}</p>
-                    <button className="story-button" onClick={reOrder}>Sekoita adjektiivit</button>
-                    <button className="story-button" onClick={start}>Kokeile uudelleen</button>
-                    <img src={english} onClick={englishLang} alt="english" className="flag-button right-corner"/>
-                </div>
-
-            )
-
-            }
-    } else {
-        if (adjectives.length < 20) {
-        return (
-            <div className="present-list story-container">
-                <h1 className="story-title">Give 20 adjectives to write your own Christmas story</h1>
-                <p>Ask friends or family to join - it's more fun together</p>
-                <StoryForm
-                adjectives={adjectives}
-                setAdjectives={setAdjectives}
-                inputText={inputText}
-                setInputText={setInputText}
-                inputTarget={inputTarget}
-                setInputTarget={setInputTarget}
-                />
-                <ol className="">
-                {adjectives.map(adjective => (
-                    
-                    <li key={adjective.key}>{adjective.text}</li>
-                ))}
-                </ol>
-                <img src={finnish} onClick={finnishLang} alt="english" className="flag-button right-corner"/>
             </div>
-
         )} else {
 
             createStory()
 
             return(
-                <div className="present-list story-container">
-                    <h1 className="recipe-title">Christmas Story</h1>
-                    <p>{englishStory}</p>
-                    <button className="story-button" onClick={reOrder}>Re-order</button>
-                    <button className="story-button" onClick={start}>Try again</button>
-                    <img src={finnish} onClick={finnishLang} alt="english" className="flag-button right-corner"/>
+                <div>
+                    <div className="home-button-div whole-width">
+                        <button className="present-button no-margin" onClick={closeImage}><FontAwesomeIcon icon={faHome} /></button>
+                    </div>
+                    <div className="present-list story-container">
+                        <h1 className="recipe-title">Christmas Story</h1>
+                        <p>{englishStory}</p>
+                        <button className="story-button" onClick={reOrder}>Re-order</button>
+                        <button className="story-button" onClick={start}>Try again</button>
+                        <img src={finnish} onClick={finnishLang} alt="english" className="flag-button right-corner"/>
+                    </div>
                 </div>
 
             )

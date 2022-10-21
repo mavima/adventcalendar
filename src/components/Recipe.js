@@ -11,49 +11,49 @@ import finnish from '../images/finnish.png';
 const Recipe = ({dose, setDose, doses, setDoses, recipe, setRecipe, portions, setPortions, language, setLanguage}) => {
 
     const englishDoses = [
-        {id:Math.floor(Math.random() * 100), amount: null, type: "", ingredient: "Brownie layer:"},
-        {id:Math.floor(Math.random() * 100), amount: 75, type: "g", ingredient: "Dark chocolate"},
-        {id:Math.floor(Math.random() * 100), amount: 50, type: "g", ingredient: "Butter"},
-        {id:Math.floor(Math.random() * 100), amount: 1, type: "dl", ingredient: "Sugar"},
-        {id:Math.floor(Math.random() * 100), amount: 1, type: "tsp", ingredient: "Vanilla powder"},
-        {id:Math.floor(Math.random() * 100), amount: 1, type: "pinch of", ingredient: "Salt"},
-        {id:Math.floor(Math.random() * 100), amount: 1, type: "", ingredient: "Egg"},
-        {id:Math.floor(Math.random() * 100), amount: 1, type: "tbsp", ingredient: "Cocoa powder"},
-        {id:Math.floor(Math.random() * 100), amount: 1, type: "dl", ingredient: "Flour"},
-        {id:Math.floor(Math.random() * 100), amount: null, type: "", ingredient: "Mousse layer:"},
-        {id:Math.floor(Math.random() * 100), amount: 3, type: "dl", ingredient: "Cream"},
-        {id:Math.floor(Math.random() * 100), amount: 300, type: "g", ingredient: "Cream cheese"},
-        {id:Math.floor(Math.random() * 100), amount: 250, type: "g", ingredient: "Chocolate"},
-        {id:Math.floor(Math.random() * 100), amount: 1, type: "tbsp", ingredient: "Irish cream liqueur "},
-        {id:Math.floor(Math.random() * 100), amount: null, type: "", ingredient: "Rashberry layer:"},
-        {id:Math.floor(Math.random() * 100), amount: 4, type: "dl", ingredient: "Rashberries"},
-        {id:Math.floor(Math.random() * 100), amount: 1, type: "dl", ingredient: "Rashberry juice"},
-        {id:Math.floor(Math.random() * 100), amount: 0.5, type: "dl", ingredient: "Sugar"},
-        {id:Math.floor(Math.random() * 100), amount: 2, type: "tl", ingredient: "Agar agar"},
-        {id:Math.floor(Math.random() * 100), amount: 150, type: "g", ingredient: "Thin mint chocolates"},
+        {id:Math.floor(Math.random() * 10000), amount: null, type: "", ingredient: "Brownie layer:"},
+        {id:Math.floor(Math.random() * 10000), amount: 75, type: "g", ingredient: "Dark chocolate"},
+        {id:Math.floor(Math.random() * 10000), amount: 50, type: "g", ingredient: "Butter"},
+        {id:Math.floor(Math.random() * 10000), amount: 1, type: "dl", ingredient: "Sugar"},
+        {id:Math.floor(Math.random() * 10000), amount: 1, type: "tsp", ingredient: "Vanilla powder"},
+        {id:Math.floor(Math.random() * 10000), amount: 1, type: "pinch of", ingredient: "Salt"},
+        {id:Math.floor(Math.random() * 10000), amount: 1, type: "", ingredient: "Egg"},
+        {id:Math.floor(Math.random() * 10000), amount: 1, type: "tbsp", ingredient: "Cocoa powder"},
+        {id:Math.floor(Math.random() * 10000), amount: 1, type: "dl", ingredient: "Flour"},
+        {id:Math.floor(Math.random() * 10000), amount: null, type: "", ingredient: "Mousse layer:"},
+        {id:Math.floor(Math.random() * 10000), amount: 3, type: "dl", ingredient: "Cream"},
+        {id:Math.floor(Math.random() * 10000), amount: 300, type: "g", ingredient: "Cream cheese"},
+        {id:Math.floor(Math.random() * 10000), amount: 250, type: "g", ingredient: "Chocolate"},
+        {id:Math.floor(Math.random() * 10000), amount: 1, type: "tbsp", ingredient: "Irish cream liqueur "},
+        {id:Math.floor(Math.random() * 10000), amount: null, type: "", ingredient: "Rashberry layer:"},
+        {id:Math.floor(Math.random() * 10000), amount: 4, type: "dl", ingredient: "Rashberries"},
+        {id:Math.floor(Math.random() * 10000), amount: 1, type: "dl", ingredient: "Rashberry juice"},
+        {id:Math.floor(Math.random() * 10000), amount: 0.5, type: "dl", ingredient: "Sugar"},
+        {id:Math.floor(Math.random() * 10000), amount: 2, type: "tl", ingredient: "Agar agar"},
+        {id:Math.floor(Math.random() * 10000), amount: 150, type: "g", ingredient: "Thin mint chocolates"},
     ]
 
     const finnishDoses = [
-        {id:Math.floor(Math.random() * 100), amount: null, type: "", ingredient: "Brownie-kerros:"},
-        {id:Math.floor(Math.random() * 100), amount: 75, type: "g", ingredient: "Tummaa suklaata"},
-        {id:Math.floor(Math.random() * 100), amount: 50, type: "g", ingredient: "Voita"},
-        {id:Math.floor(Math.random() * 100), amount: 1, type: "dl", ingredient: "Sokeria"},
-        {id:Math.floor(Math.random() * 100), amount: 1, type: "tl", ingredient: "Vaniljasokeria"},
-        {id:Math.floor(Math.random() * 100), amount: 1, type: "hyppysellinen", ingredient: "Suolaa"},
-        {id:Math.floor(Math.random() * 100), amount: 1, type: "", ingredient: "Muna"},
-        {id:Math.floor(Math.random() * 100), amount: 1, type: "rkl", ingredient: "Kaakaojauhetta"},
-        {id:Math.floor(Math.random() * 100), amount: 1, type: "dl", ingredient: "Vehnäjauhoa"},
-        {id:Math.floor(Math.random() * 100), amount: null, type: "", ingredient: "Mousse-kerros:"},
-        {id:Math.floor(Math.random() * 100), amount: 3, type: "dl", ingredient: "Kuohukermaa"},
-        {id:Math.floor(Math.random() * 100), amount: 300, type: "g", ingredient: "Tuorejuustoa"},
-        {id:Math.floor(Math.random() * 100), amount: 250, type: "g", ingredient: "Suklaata"},
-        {id:Math.floor(Math.random() * 100), amount: 1, type: "rkl", ingredient: "Irish cream likööriä "},
-        {id:Math.floor(Math.random() * 100), amount: null, type: "", ingredient: "Vadelmahyytelö:"},
-        {id:Math.floor(Math.random() * 100), amount: 4, type: "dl", ingredient: "Vadelmia"},
-        {id:Math.floor(Math.random() * 100), amount: 1, type: "dl", ingredient: "Vadelmamehua"},
-        {id:Math.floor(Math.random() * 100), amount: 0.5, type: "dl", ingredient: "Sokeria"},
-        {id:Math.floor(Math.random() * 100), amount: 2, type: "tl", ingredient: "Agar agar -jauhetta"},
-        {id:Math.floor(Math.random() * 100), amount: 150, type: "g", ingredient: "Ohuita minttusuklaita"},
+        {id:Math.floor(Math.random() * 10000), amount: null, type: "", ingredient: "Brownie-kerros:"},
+        {id:Math.floor(Math.random() * 10000), amount: 75, type: "g", ingredient: "Tummaa suklaata"},
+        {id:Math.floor(Math.random() * 10000), amount: 50, type: "g", ingredient: "Voita"},
+        {id:Math.floor(Math.random() * 10000), amount: 1, type: "dl", ingredient: "Sokeria"},
+        {id:Math.floor(Math.random() * 10000), amount: 1, type: "tl", ingredient: "Vaniljasokeria"},
+        {id:Math.floor(Math.random() * 10000), amount: 1, type: "hyppysellinen", ingredient: "Suolaa"},
+        {id:Math.floor(Math.random() * 10000), amount: 1, type: "", ingredient: "Muna"},
+        {id:Math.floor(Math.random() * 10000), amount: 1, type: "rkl", ingredient: "Kaakaojauhetta"},
+        {id:Math.floor(Math.random() * 10000), amount: 1, type: "dl", ingredient: "Vehnäjauhoa"},
+        {id:Math.floor(Math.random() * 10000), amount: null, type: "", ingredient: "Mousse-kerros:"},
+        {id:Math.floor(Math.random() * 10000), amount: 3, type: "dl", ingredient: "Kuohukermaa"},
+        {id:Math.floor(Math.random() * 10000), amount: 300, type: "g", ingredient: "Tuorejuustoa"},
+        {id:Math.floor(Math.random() * 10000), amount: 250, type: "g", ingredient: "Suklaata"},
+        {id:Math.floor(Math.random() * 10000), amount: 1, type: "rkl", ingredient: "Irish cream likööriä "},
+        {id:Math.floor(Math.random() * 10000), amount: null, type: "", ingredient: "Vadelmahyytelö:"},
+        {id:Math.floor(Math.random() * 10000), amount: 4, type: "dl", ingredient: "Vadelmia"},
+        {id:Math.floor(Math.random() * 10000), amount: 1, type: "dl", ingredient: "Vadelmamehua"},
+        {id:Math.floor(Math.random() * 10000), amount: 0.5, type: "dl", ingredient: "Sokeria"},
+        {id:Math.floor(Math.random() * 10000), amount: 2, type: "tl", ingredient: "Agar agar -jauhetta"},
+        {id:Math.floor(Math.random() * 10000), amount: 150, type: "g", ingredient: "Ohuita minttusuklaita"},
     ]
 
     const englishRecipe = () => {
@@ -174,7 +174,7 @@ const Recipe = ({dose, setDose, doses, setDoses, recipe, setRecipe, portions, se
                 <div className="recipe-box">
                         <div className="doses">
                     {doses.map((dose) =>
-                        <p>{dose.amount} {dose.type} {dose.ingredient}</p>
+                        <p key={dose.id}>{dose.amount} {dose.type} {dose.ingredient}</p>
                     )}
                 </div>
                 

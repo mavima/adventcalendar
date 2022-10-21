@@ -9,19 +9,19 @@ import { faHome } from "@fortawesome/free-solid-svg-icons";
 
 
 const christmasCharacter = [
-    {text: "The Grinch", src: "https://i.pinimg.com/474x/ea/64/ab/ea64abcb102827ef3409ddd9e51b1a19--watch-the-grinch-the-grinch-stole-christmas.jpg"},
-    {text: "Snowman", src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJOZ0TNOuSZ9xmwJIJtIcybguCziCq_-zQEQ&usqp=CAU"},
-    {text: "Rudolf", src: "https://vistapointe.net/images/rudolph-the-rednosed-reindeer-10.jpg"},
-    {text: "Elf", src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShcUtVI7yaY7eILMdu0hXe8dRj4GBdfu7tqA&usqp=CAU"}, 
-    {text: "Angel", src: "https://thumbs.dreamstime.com/b/angel-cartoon-white-background-29826757.jpg"}
+    {id: Math.floor(Math.random() * 1000), text: "The Grinch", src: "https://i.pinimg.com/474x/ea/64/ab/ea64abcb102827ef3409ddd9e51b1a19--watch-the-grinch-the-grinch-stole-christmas.jpg"},
+    {id: Math.floor(Math.random() * 1000), text: "Snowman", src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJOZ0TNOuSZ9xmwJIJtIcybguCziCq_-zQEQ&usqp=CAU"},
+    {id: Math.floor(Math.random() * 1000), text: "Rudolf", src: "https://vistapointe.net/images/rudolph-the-rednosed-reindeer-10.jpg"},
+    {id: Math.floor(Math.random() * 1000), text: "Elf", src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShcUtVI7yaY7eILMdu0hXe8dRj4GBdfu7tqA&usqp=CAU"}, 
+    {id: Math.floor(Math.random() * 1000), text: "Angel", src: "https://thumbs.dreamstime.com/b/angel-cartoon-white-background-29826757.jpg"}
 ]
 
 const christmasCharacterFinnish = [
-    {text: "Grinch", src: "https://i.pinimg.com/474x/ea/64/ab/ea64abcb102827ef3409ddd9e51b1a19--watch-the-grinch-the-grinch-stole-christmas.jpg"},
-    {text: "Lumiukko", src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJOZ0TNOuSZ9xmwJIJtIcybguCziCq_-zQEQ&usqp=CAU"},
-    {text: "Petteri Punakuono", src: "https://vistapointe.net/images/rudolph-the-rednosed-reindeer-10.jpg"},
-    {text: "Tonttu", src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShcUtVI7yaY7eILMdu0hXe8dRj4GBdfu7tqA&usqp=CAU"}, 
-    {text: "Enkeli", src: "https://thumbs.dreamstime.com/b/angel-cartoon-white-background-29826757.jpg"}
+    {id: Math.floor(Math.random() * 1000), text: "Grinch", src: "https://i.pinimg.com/474x/ea/64/ab/ea64abcb102827ef3409ddd9e51b1a19--watch-the-grinch-the-grinch-stole-christmas.jpg"},
+    {id: Math.floor(Math.random() * 1000), text: "Lumiukko", src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJOZ0TNOuSZ9xmwJIJtIcybguCziCq_-zQEQ&usqp=CAU"},
+    {id: Math.floor(Math.random() * 1000), text: "Petteri Punakuono", src: "https://vistapointe.net/images/rudolph-the-rednosed-reindeer-10.jpg"},
+    {id: Math.floor(Math.random() * 1000), text: "Tonttu", src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShcUtVI7yaY7eILMdu0hXe8dRj4GBdfu7tqA&usqp=CAU"}, 
+    {id: Math.floor(Math.random() * 1000), text: "Enkeli", src: "https://thumbs.dreamstime.com/b/angel-cartoon-white-background-29826757.jpg"}
 ]
 
 
@@ -103,13 +103,13 @@ const Quiz = ({questions, setQuestions, currentQuestion, setCurrentQuestion, set
                 ) : (
                 <div className="question">
 
-                    <div className="question-text">
+                    <div className="question-text" key={questions[currentQuestion].id}>
 
                         {questions[currentQuestion].questionText}
                     </div>
                     <div className="options">
                         {questions[currentQuestion].options.map((option) =>
-                            <div className="answer-button" onClick={handleClick}>{option.answerText}</div>
+                            <div className="answer-button" onClick={handleClick} key={option.id}>{option.answerText}</div>
                         )}
                     </div> 
                     <img src={english} onClick={englishQuiz} alt="english" className="flag-button"/>
@@ -144,7 +144,7 @@ const Quiz = ({questions, setQuestions, currentQuestion, setCurrentQuestion, set
                     </div>
                     <div className="options">
                         {questions[currentQuestion].options.map((option) =>
-                            <div className="answer-button" onClick={handleClick}>{option.answerText}</div>
+                            <div className="answer-button" onClick={handleClick} key={option.points + Math.floor(Math.random() * 1000)}>{option.answerText}</div>
                         )}
                     </div> 
                 </div>

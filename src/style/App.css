@@ -96,7 +96,7 @@
     max-width: 30px;
     max-height: 90%;
     margin-right: 10px;
-    margin-top: 10px;
+    margin-top: 5px;
   }
 
   .memory-board {
@@ -296,7 +296,7 @@
 }
 
 .close-video {
-  height: 5%;
+  height: 2rem;
   width: 100%;
   background-color: #f2dab5;
   opacity: 0.8;
@@ -392,7 +392,6 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
-  /* grid-template-rows: repeat(8, 1fr); */
 }
 
 .card {
@@ -638,7 +637,7 @@ justify-content: center;
 }
 
 .right-corner {
-  margin-left: 90%;
+  margin-left: 90% !important;
 }
 
 /* style for piano */
